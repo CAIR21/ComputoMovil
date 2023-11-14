@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FIC</string>
+    <!--login-->
+    <string name="LogoLo">Logo</string>
+    <string name="email">Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="Login">Iniciar sesion</string>
+    <string name="Register">Registrarse</string>
+    <string name="Reset">¿Olvido su contraseña?</string>
+    <string name="Checkbox">Recuerdame</string>
+    <string name="Description">¿Aun no tienes cuenta? Registrate ahora</string>
+</resources>
