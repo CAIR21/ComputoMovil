@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FIC</string>
+    <string name="app_name">FIC+</string>
     <!--login-->
     <string name="LogoLo">Logo</string>
     <string name="email">Correo</string>
