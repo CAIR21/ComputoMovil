@@ -44,7 +44,26 @@ class UsuariosController extends ResourceController
      */
     public function create()
     {
-        //
+        //METODO POST
+        $Modelo = new Usuarios();
+        $datos = [
+            'Nombre_Usuario' => $this->request->getVar('Nombre_Usuario'),
+            'Apellido_Usuario' => $this->request->getVar('Apellido_Usuario'),
+            'Correo' => $this->request->getVar('Correo'),
+            'Contrasenia' => $this->request->getVar('Contrasenia')
+        ];
+        $datos['Contrasenia'] = md5($datos['Contrasenia']);
+        
+
+        $Modelo->insert($datos); //Se insertan los Datos en la BD
+
+        $resultado = [
+            'estatus' => 201,
+            'error' => null,
+            'mensaje' => ['success' => 'Recurso Almacenado con Exito']
+        ];
+
+        return $this->respondCreated($resultado,201);
     }
 
     /**

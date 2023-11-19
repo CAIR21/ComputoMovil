@@ -69,3 +69,45 @@ in APPPATH\Controllers\PeliculasController.php on line 81.
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-19 22:34:42 --> Class "App\Controllers\ModeloNoticia" not found
+in APPPATH\Controllers\UsuariosController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\Proyecto PRO\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-19 22:35:20 --> Class "App\Controllers\ModeloNoticia" not found
+in APPPATH\Controllers\UsuariosController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\Proyecto PRO\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-19 22:38:20 --> Class "App\Controllers\ModeloNoticia" not found
+in APPPATH\Controllers\UsuariosController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\Proyecto PRO\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-19 22:39:20 --> Class "App\Controllers\Usuario" not found
+in APPPATH\Controllers\UsuariosController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\Proyecto PRO\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-19 22:39:31 --> Class "App\Controllers\Usuario" not found
+in APPPATH\Controllers\UsuariosController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\Proyecto PRO\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-19 22:50:20 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::md5()
+in APPPATH\Controllers\UsuariosController.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\Proyecto PRO\\ComputoMovil\\API_FICPlus\\public\\index.php')
