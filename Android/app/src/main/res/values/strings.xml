@@ -9,4 +9,13 @@
     <string name="Reset">¿Olvido su contraseña?</string>
     <string name="Checkbox">Recuerdame</string>
     <string name="Description">¿Aun no tienes cuenta? Registrate ahora</string>
+    <string name="title">Bienvenido a FIC+</string>
+    <string name="Facebook">Imagen facebook</string>
+    <string name="Google">imagen google</string>
+    <!--sing up-->
+    <string name="title2">Registrate</string>
+    <string name="Description2">¿Ya tiene cuenta? Inicie sesion ahora</string>
+    <string name="Name">Nombre</string>
+    <string name="Name2">Apellido</string>
+    <string name="RepContra">Repetir contraseña</string>
 </resources>
