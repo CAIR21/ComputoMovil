@@ -10,7 +10,11 @@
 <body class="container-fluid bg-dark m-0 p-0">
     <p class="text-white mt-5 fs-1 text-center">Registrarme</p>
     <section class="container-fluid mt-5 w-50 border border-warning border-3 rounded text-white">
-        <form action="127.1.1.0" class="text-center" method="post">
+<<<<<<< HEAD
+        <form action="" class="text-center">
+=======
+        <form action="" class="text-center">
+>>>>>>> origin/main
             
             <!--
             <label for="exampleFormControlInput1" class="form-label m-1 fs-5">Ingresa tu Correo Electronico</label>
