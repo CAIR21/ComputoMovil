@@ -7,8 +7,51 @@
     android:background="@color/Background2"
     tools:context=".RegisterActivity">
 
+    <TextView
+        android:id="@+id/tvRegistrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/title2"
+        android:fontFamily="serif"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imgRegistro"
+        android:layout_width="106dp"
+        android:layout_height="126dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistrate"
+        app:srcCompat="@drawable/formulario"
+        android:contentDescription="@string/LogoReg" />
+
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/edtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:backgroundTint="@color/Actions"
+        android:drawableStart="@android:drawable/ic_menu_edit"
+        android:ems="10"
+        android:hint="@string/Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgRegistro"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/edtApellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -23,11 +66,11 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombre"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/edtCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -43,12 +86,12 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        app:layout_constraintTop_toBottomOf="@+id/edtApellido"
         app:layout_constraintVertical_bias="0.0" />
 
 
     <EditText
-        android:id="@+id/editTextTextPassword4"
+        android:id="@+id/edtRepContra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -63,11 +106,11 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3"
+        app:layout_constraintTop_toBottomOf="@+id/edtContraReg"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/edtContraReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -82,30 +125,11 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        app:layout_constraintVertical_bias="0.100000024" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:backgroundTint="@color/Actions"
-        android:drawableStart="@android:drawable/ic_menu_edit"
-        android:ems="10"
-        android:hint="@string/Name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/edtCorreo"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/Ir_Login"
+        android:id="@+id/btnIniciarSesionReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/Actions"
@@ -119,7 +143,7 @@
         app:layout_constraintVertical_bias="0.86" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnRegistrarseReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/Actions"
@@ -130,10 +154,10 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.628" />
+        app:layout_constraintVertical_bias="0.64" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvConCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Description2"
@@ -145,52 +169,33 @@
         app:layout_constraintVertical_bias="0.778" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgFacebookReg"
         android:layout_width="55dp"
         android:layout_height="55dp"
+        android:contentDescription="@string/Facebook"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.715"
-        app:srcCompat="@drawable/facebook"
-        android:contentDescription="@string/Facebook" />
+        app:layout_constraintVertical_bias="0.73"
+        app:srcCompat="@drawable/facebook" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imgGoogleReg"
         android:layout_width="55dp"
         android:layout_height="55dp"
+        android:contentDescription="@string/Google"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.422"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.715"
-        app:srcCompat="@drawable/google"
-        android:contentDescription="@string/Google" />
+        app:layout_constraintVertical_bias="0.73"
+        app:srcCompat="@drawable/google" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/title2"
-        android:fontFamily="serif"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextSizeCheck" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="106dp"
-        android:layout_height="126dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:srcCompat="@drawable/formulario" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

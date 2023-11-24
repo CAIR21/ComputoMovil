@@ -2,10 +2,10 @@ package com.CAIR.fic;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,13 +14,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button IrAlRegistro = findViewById(R.id.Ir_Registro);
-        IrAlRegistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                IrAlRegister();
-            }
-        });
+        Button IrAlRegistro = findViewById(R.id.btnRegistrarse);
+        IrAlRegistro.setOnClickListener(view -> IrAlRegister());
     }
 
     private void IrAlRegister() {

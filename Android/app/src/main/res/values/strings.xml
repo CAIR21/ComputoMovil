@@ -18,4 +18,5 @@
     <string name="Name">Nombre</string>
     <string name="Name2">Apellido</string>
     <string name="RepContra">Repetir contraseña</string>
+    <string name="LogoReg">LogoReg</string>
 </resources>
