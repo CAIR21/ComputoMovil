@@ -1,0 +1,200 @@
+CRITICAL - 2023-11-27 01:23:36 --> Undefined property: App\Controllers\UsuariosController::$Usuarios
+in APPPATH\Controllers\UsuariosController.php on line 25.
+ 1 APPPATH\Controllers\UsuariosController.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UsuariosController::$Usuarios', 'C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-27 01:24:01 --> Undefined property: App\Controllers\UsuariosController::$Usuarios
+in APPPATH\Controllers\UsuariosController.php on line 25.
+ 1 APPPATH\Controllers\UsuariosController.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UsuariosController::$Usuarios', 'C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-27 01:25:33 --> Undefined property: App\Controllers\UsuariosController::$Usuarios
+in APPPATH\Controllers\UsuariosController.php on line 25.
+ 1 APPPATH\Controllers\UsuariosController.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UsuariosController::$Usuarios', 'C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-27 01:27:45 --> Undefined property: App\Controllers\UsuariosController::$Usuarios
+in APPPATH\Controllers\UsuariosController.php on line 26.
+ 1 APPPATH\Controllers\UsuariosController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\UsuariosController::$Usuarios', 'C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:28:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-27 01:28:26 --> Call to undefined method App\Models\Usuarios::getPasswordByCorreo
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\UsuariosController.php(26): CodeIgniter\Model->__call('getPasswordByCorreo', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:40:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-27 01:40:30 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\UsuariosController.php on line 28.
+ 1 APPPATH\Controllers\UsuariosController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:41:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:42:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:42:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:42:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:43:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:45:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:46:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:47:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:49:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:50:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:50:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-27 01:51:03 --> CodeIgniter\Router\RouteCollection::resource(): Argument #2 ($options) must be of type ?array, string given, called in C:\Users\moisi\OneDrive\Escritorio\R\ComputoMovil\API_FICPlus\app\Config\Routes.php on line 12
+in SYSTEMPATH\Router\RouteCollection.php on line 828.
+ 1 APPPATH\Config\Routes.php(12): CodeIgniter\Router\RouteCollection->resource('login', 'UsuariosController::login')
+ 2 SYSTEMPATH\Router\RouteCollection.php(344): require('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\app\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:51:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-27 01:51:52 --> Undefined variable $correo
+in APPPATH\Controllers\UsuariosController.php on line 22.
+ 1 APPPATH\Controllers\UsuariosController.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $correo', 'C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:52:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:54:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:55:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-27 01:55:47 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\UsuariosController.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:57:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-27 01:57:07 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\UsuariosController.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-27 01:57:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$Usuarios is deprecated in APPPATH\Controllers\UsuariosController.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-27 01:57:59 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\UsuariosController.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\moisi\\OneDrive\\Escritorio\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')

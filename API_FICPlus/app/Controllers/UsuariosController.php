@@ -17,6 +17,36 @@ class UsuariosController extends ResourceController
         //
     }
 
+    public function login()
+    {
+
+        echo 'Dato recibido de postman'.$correo;
+        $this->Usuarios = new Usuarios();
+        
+        $contrasena = $this->request->getPost('contrasena');
+        $Datos= $this->Usuarios->getDatos($correo);
+        echo 'Dato recibido de postman'.$correo;
+
+        if($Datos == null){
+            $response = 'No hay registros';
+            return $this->response->setJSON($response);
+        }
+
+        $contrasenaAlmacenada = $Datos['Contrasena'];
+        $contrasena = md5($contrasena);
+
+        if ($contrasenaAlmacenada == $contrasena) {
+            $response['status'] = 'success';
+            $response['message'] = 'Inicio de sesión exitoso';
+        } else {
+            $response['status'] = 'error';
+            $response['message'] = 'Correo o contraseña incorrectos';
+        }
+
+        return $this->response->setJSON($response);
+    }
+
+
     /**
      * Return the properties of a resource object
      *
@@ -24,7 +54,7 @@ class UsuariosController extends ResourceController
      */
     public function show($id = null)
     {
-        //
+
     }
 
     /**
