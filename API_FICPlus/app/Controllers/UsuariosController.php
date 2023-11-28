@@ -19,31 +19,27 @@ class UsuariosController extends ResourceController
 
     public function login()
     {
+        $Datos = [
+            'Correo' => $this->request->getVar('email'),
+            'Contra' => $this->request->getVar('password')
+        ];
+        $modelo = new Usuarios();
 
-        echo 'Dato recibido de postman'.$correo;
-        $this->Usuarios = new Usuarios();
-        
-        $contrasena = $this->request->getPost('contrasena');
-        $Datos= $this->Usuarios->getDatos($correo);
-        echo 'Dato recibido de postman'.$correo;
-
-        if($Datos == null){
-            $response = 'No hay registros';
-            return $this->response->setJSON($response);
+        $solicitud = $modelo->getWhere(['Correo' => $Datos['Correo']])->getRow();
+        if($solicitud){
+            if(md5($Datos['Contra']) == $solicitud->Contrasenia){
+                $resultado = [
+                    'estatus' => 200,
+                    'error' => null,
+                    'mensaje' => ['success' => 'Inicio de Sesión Correcto']
+                ];
+                return $this->respond($resultado);
+            }
+            var_dump("hola");
+        }else{
+            return $this->respond("Error, valide los datos");
         }
 
-        $contrasenaAlmacenada = $Datos['Contrasena'];
-        $contrasena = md5($contrasena);
-
-        if ($contrasenaAlmacenada == $contrasena) {
-            $response['status'] = 'success';
-            $response['message'] = 'Inicio de sesión exitoso';
-        } else {
-            $response['status'] = 'error';
-            $response['message'] = 'Correo o contraseña incorrectos';
-        }
-
-        return $this->response->setJSON($response);
     }
 
 

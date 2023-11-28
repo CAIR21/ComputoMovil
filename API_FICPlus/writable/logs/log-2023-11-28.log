@@ -1,0 +1,118 @@
+CRITICAL - 2023-11-28 16:34:49 --> Class "App\Controllers\Usuario" not found
+in APPPATH\Controllers\UsuariosController.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:35:12 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::getFirst()
+in APPPATH\Controllers\UsuariosController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:40:28 --> Undefined variable $email
+in APPPATH\Controllers\UsuariosController.php on line 32.
+ 1 APPPATH\Controllers\UsuariosController.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:41:56 --> Undefined array key "Contrasenia"
+in APPPATH\Controllers\UsuariosController.php on line 31.
+ 1 APPPATH\Controllers\UsuariosController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Contrasenia"', 'C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:42:44 --> Undefined array key "Contrasenia"
+in APPPATH\Controllers\UsuariosController.php on line 31.
+ 1 APPPATH\Controllers\UsuariosController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Contrasenia"', 'C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:43:09 --> Undefined array key 4
+in APPPATH\Controllers\UsuariosController.php on line 31.
+ 1 APPPATH\Controllers\UsuariosController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:43:56 --> Undefined array key "Contrasenia"
+in APPPATH\Controllers\UsuariosController.php on line 31.
+ 1 APPPATH\Controllers\UsuariosController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Contrasenia"', 'C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:44:35 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\UsuariosController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:44:52 --> Undefined array key "ID_Usuario"
+in APPPATH\Controllers\UsuariosController.php on line 29.
+ 1 APPPATH\Controllers\UsuariosController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ID_Usuario"', 'C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:45:51 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\UsuariosController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:46:01 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\UsuariosController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:46:34 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\UsuariosController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:48:12 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\UsuariosController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:50:13 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\UsuariosController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:50:23 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\UsuariosController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-28 16:50:37 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\UsuariosController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Alumnos\\Desktop\\R\\ComputoMovil\\API_FICPlus\\public\\index.php')

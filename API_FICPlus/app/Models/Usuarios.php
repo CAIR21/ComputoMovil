@@ -37,10 +37,4 @@ class Usuarios extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    public function getDatos($correo)
-    {
-        var_dump($correo); // Agrega esta línea para depurar
-        return $this->getWhere(['Correo' => $correo])->getRow();
-    }
 }
