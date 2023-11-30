@@ -6,6 +6,8 @@
   <title>Login - Servicio de Streaming</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 
   <style>
     #video-background {
@@ -67,7 +69,6 @@
   </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
@@ -81,20 +82,23 @@
 
 
   function Iniciar(){
-    console.log("Entro");
+    console.log("Entró");
     var correo = $('#email').val();
     var password = $('#password').val();
     $.ajax({
             type: 'POST',
-            url: '<?= base_url("UsuariosController/login") ?>',
-            data: { correo: correo, contrasena: contrasena },
+            url: '<?= base_url("login") ?>',
+            data: { email: correo, password: password },
             dataType: 'json',
             success: function(response) {
-                if (response.status === 'success') {
-                    alert(response.message);
+                if (response.estatus === 'success') {
+                    console.log(response.estatus);
+                    alert("sijalo");
+                    window.location.href = '<?= base_url('peliculas') ?>';
                     // Redirigir o realizar acciones después del inicio de sesión exitoso
                 } else {
-                    alert(response.message);
+                  console.log(response.estatus);
+                    alert("nojalo");
                     // Manejar el caso de credenciales inválidas
                 }
             },

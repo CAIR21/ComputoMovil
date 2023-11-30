@@ -26,6 +26,7 @@ class UsuariosController extends ResourceController
         $modelo = new Usuarios();
 
         $solicitud = $modelo->getWhere(['Correo' => $Datos['Correo']])->getRow();
+        
         if($solicitud){
             if(md5($Datos['Contra']) == $solicitud->Contrasenia){
                 $resultado = [
@@ -35,7 +36,6 @@ class UsuariosController extends ResourceController
                 ];
                 return $this->respond($resultado);
             }
-            var_dump("hola");
         }else{
             return $this->respond("Error, valide los datos");
         }

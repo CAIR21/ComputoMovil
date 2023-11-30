@@ -1,0 +1,16 @@
+CRITICAL - 2023-11-29 01:41:23 --> Undefined property: CodeIgniter\HTTP\IncomingRequest::$getJSON
+in APPPATH\Controllers\UsuariosController.php on line 25.
+ 1 APPPATH\Controllers\UsuariosController.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\HTTP\\IncomingRequest::$getJSON', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-29 01:41:37 --> Undefined property: CodeIgniter\HTTP\IncomingRequest::$getJSON
+in APPPATH\Controllers\UsuariosController.php on line 25.
+ 1 APPPATH\Controllers\UsuariosController.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\HTTP\\IncomingRequest::$getJSON', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\UsuariosController.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')

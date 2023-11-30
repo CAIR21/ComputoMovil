@@ -1,0 +1,78 @@
+CRITICAL - 2023-11-23 01:45:33 --> Undefined global variable $_SESSION
+in APPPATH\Views\menu_principal.php on line 69.
+ 1 APPPATH\Views\menu_principal.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Views\\menu_principal.php', 69)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Views\\menu_principal.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('menu_principal.php', [], true)
+ 5 APPPATH\Controllers\Home.php(16): view('menu_principal.php')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->menu()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-23 02:58:37 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\PeliculasController.php on line 32.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\PeliculasController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\PeliculasController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\PeliculasController')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\PeliculasController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+WARNING - 2023-11-23 03:45:51 --> [DEPRECATED] md5(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\UsuariosController.php on line 55.
+ 1 APPPATH\Controllers\UsuariosController.php(55): md5(null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UsuariosController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-23 03:49:04 --> explode(): Argument #2 ($string) must be of type string, array given
+in SYSTEMPATH\Router\Router.php on line 475.
+ 1 SYSTEMPATH\Router\Router.php(475): explode('::', [...])
+ 2 SYSTEMPATH\Router\Router.php(186): CodeIgniter\Router\Router->checkRoutes('peliculas')
+ 3 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\Router->handle('peliculas')
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-23 03:52:19 --> Undefined property: App\Controllers\PeliculasController::$respond
+in APPPATH\Controllers\PeliculasController.php on line 29.
+ 1 APPPATH\Controllers\PeliculasController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PeliculasController::$respond', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\PeliculasController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->showall()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-23 03:52:20 --> Undefined property: App\Controllers\PeliculasController::$respond
+in APPPATH\Controllers\PeliculasController.php on line 29.
+ 1 APPPATH\Controllers\PeliculasController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PeliculasController::$respond', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\PeliculasController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->showall()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-23 03:52:20 --> Undefined property: App\Controllers\PeliculasController::$respond
+in APPPATH\Controllers\PeliculasController.php on line 29.
+ 1 APPPATH\Controllers\PeliculasController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PeliculasController::$respond', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\PeliculasController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->showall()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-23 03:52:20 --> Undefined property: App\Controllers\PeliculasController::$respond
+in APPPATH\Controllers\PeliculasController.php on line 29.
+ 1 APPPATH\Controllers\PeliculasController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PeliculasController::$respond', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\PeliculasController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->showall()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-11-23 03:52:21 --> Undefined property: App\Controllers\PeliculasController::$respond
+in APPPATH\Controllers\PeliculasController.php on line 29.
+ 1 APPPATH\Controllers\PeliculasController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PeliculasController::$respond', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\PeliculasController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->showall()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')

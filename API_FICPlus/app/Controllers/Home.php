@@ -10,6 +10,6 @@ class Home extends BaseController
     }
 
     public function inicio(){
-        return view("Register2.php");
+        return view("login2.php");
     }
 }
