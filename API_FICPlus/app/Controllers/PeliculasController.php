@@ -22,16 +22,22 @@ class PeliculasController extends ResourceController
      *
      * @return mixed
      */
-    public function show($id = null)
+    public function showall()
     {
         $ModeloPeliculas = new Peliculas();
-        $pelicula = $ModeloPeliculas->getWhere(['ID_Peliculas' => $id])->getResult();
-        if($pelicula){
-            return $this->respond($pelicula);
-        }else{
-            return $this->failNotFound("Error, Pelicula No Encontrada");
-        }
+        $peliculas = $ModeloPeliculas->findAll();
+        return $this->response->setJSON($peliculas);
     }
+    // public function show($id = null)
+    // {
+    //     $ModeloPeliculas = new Peliculas();
+    //     $pelicula = $ModeloPeliculas->getWhere(['ID_Peliculas' => $id])->getResult();
+    //     if($pelicula){
+    //         return $this->respond($pelicula);
+    //     }else{
+    //         return $this->failNotFound("Error, Pelicula No Encontrada");
+    //     }
+    // }
 
     /**
      * Return a new resource object, with default properties

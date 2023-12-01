@@ -12,7 +12,7 @@ class Usuarios extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["Nombre_Usuario","Apellido_Usuario","Correo","Contrasenia"];
+    protected $allowedFields    = ["Titulo","Descripcion","Director","Enlace_Video","ID_Categoria","Etiquetas","ID_Clasificacion","Poster_Pelicula","Anio","Banner_Pelicula"];
 
     // Dates
     protected $useTimestamps = false;
