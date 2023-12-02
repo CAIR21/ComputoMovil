@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\Peliculas;
+use App\Models\Categorias;
 
 class PeliculasController extends ResourceController
 {
@@ -12,7 +13,7 @@ class PeliculasController extends ResourceController
      *
      * @return mixed
      */
-    public function index()
+    /**public function index()
     {
         //
     }
@@ -25,8 +26,17 @@ class PeliculasController extends ResourceController
     public function showall()
     {
         $ModeloPeliculas = new Peliculas();
-        $peliculas = $ModeloPeliculas->findAll();
-        return $this->response->setJSON($peliculas);
+        $ModeloCategorias = new Categorias();
+        //Busca las categorias
+        $Categorias = $ModeloCategorias->findAll();
+        //Crea el archivo de los datos dividiendo las peliculas por  categorias
+        for($i = 0;$i<count($Categorias);$i++){
+            
+        $categoria = $Categorias[$i]['Categoria'];
+        $peliculas = $ModeloPeliculas->getWhere(['ID_Categoria' => $Categorias[$i]['ID_Categorias']])->getResult();
+        $Datos[$categoria] = $peliculas;
+        }
+        return $this->response->setJSON($Datos);
     }
     // public function show($id = null)
     // {

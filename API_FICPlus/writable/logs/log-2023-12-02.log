@@ -1,0 +1,42 @@
+CRITICAL - 2023-12-02 00:15:23 --> Undefined array key "ID_Categorias"
+in APPPATH\Controllers\PeliculasController.php on line 33.
+ 1 APPPATH\Controllers\PeliculasController.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ID_Categorias"', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\PeliculasController.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->showall()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-02 00:15:54 --> Undefined array key "ID_Categoria"
+in APPPATH\Controllers\PeliculasController.php on line 33.
+ 1 APPPATH\Controllers\PeliculasController.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ID_Categoria"', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\PeliculasController.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->showall()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+ERROR - 2023-12-02 00:20:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 3 in C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\system\Model.php(871): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\app\Controllers\PeliculasController.php(33): CodeIgniter\Model->__call('getWhere', Array)
+#6 C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\system\CodeIgniter.php(942): App\Controllers\PeliculasController->showall()
+#7 C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+#8 C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\...')
+#11 {main}
+CRITICAL - 2023-12-02 00:20:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peliculas`
+WHERE 0 = :0:', [...], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\PeliculasController.php(33): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->showall()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')

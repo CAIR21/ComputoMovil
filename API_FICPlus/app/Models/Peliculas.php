@@ -12,7 +12,7 @@ class Peliculas extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["Titulo","Descripcion","Director","Enlace_Video","ID_Categoria","Etiquetas","ID_Clasificacion"];
+    protected $allowedFields    = ["Titulo","Descripcion","Director","Enlace_Video","ID_Categoria","Etiquetas","ID_Clasificacion","Poster_Pelicula","Anio","Banner_Pelicula"];
 
     // Dates
     protected $useTimestamps = false;
