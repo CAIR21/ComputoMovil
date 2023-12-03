@@ -11,9 +11,9 @@
         android:id="@+id/tvRegistrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/title2"
+        android:layout_marginTop="32dp"
         android:fontFamily="serif"
+        android:text="@string/title2"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -91,25 +91,6 @@
 
 
     <EditText
-        android:id="@+id/edtRepContra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:backgroundTint="@color/Actions"
-        android:drawableStart="@android:drawable/ic_lock_idle_lock"
-        android:ems="10"
-        android:hint="@string/RepContra"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtContraReg"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
         android:id="@+id/edtContraReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -128,19 +109,35 @@
         app:layout_constraintTop_toBottomOf="@+id/edtCorreo"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/btnIniciarSesionReg"
+    <EditText
+        android:id="@+id/edtRepContra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:backgroundTint="@color/Actions"
-        android:text="@string/Login"
-        android:textColor="@color/white"
+        android:drawableStart="@android:drawable/ic_lock_idle_lock"
+        android:ems="10"
+        android:hint="@string/RepContra"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
+        app:layout_constraintTop_toBottomOf="@+id/edtContraReg"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Switch
+        android:id="@+id/switchMostrarContrasenia"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/Switch"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtRepContra" />
 
     <Button
         android:id="@+id/btnRegistrarseReg"
@@ -153,20 +150,8 @@
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64" />
-
-    <TextView
-        android:id="@+id/tvConCuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Description2"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.778" />
+        app:layout_constraintTop_toBottomOf="@+id/switchMostrarContrasenia"
+        app:layout_constraintVertical_bias="0.04000002" />
 
     <ImageView
         android:id="@+id/imgFacebookReg"
@@ -177,8 +162,8 @@
         app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarseReg"
+        app:layout_constraintVertical_bias="0.04000002"
         app:srcCompat="@drawable/facebook" />
 
     <ImageView
@@ -190,12 +175,34 @@
         app:layout_constraintHorizontal_bias="0.422"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarseReg"
+        app:layout_constraintVertical_bias="0.04000002"
         app:srcCompat="@drawable/google" />
 
+    <TextView
+        android:id="@+id/tvConCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Description2"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgFacebookReg"
+        app:layout_constraintVertical_bias="0.04000002" />
 
-
-
+    <Button
+        android:id="@+id/btnIniciarSesionReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Actions"
+        android:text="@string/Login"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvConCuenta"
+        app:layout_constraintVertical_bias="0.04000002" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,3 +10,6 @@ Sin mas por el momento bai.
 
 Actualizacion 26/11/2023
 Se modificaron visualmente los formularios, se necesita arreglar el login ya que aun no queda, pueden borrar completamente el codigo existente, el registro sigue jalando como siempre
+
+2/12/2023
+Validacioness de login y registro realizadas tanto para web como android

@@ -4,17 +4,17 @@
     <string name="LogoLo">Logo</string>
     <string name="email">Correo</string>
     <string name="password">Contraseña</string>
-    <string name="Login">Iniciar sesion</string>
+    <string name="Login">Iniciar sesión</string>
     <string name="Register">Registrarse</string>
     <string name="Reset">¿Olvido su contraseña?</string>
-    <string name="Checkbox">Recuerdame</string>
-    <string name="Description">¿Aun no tienes cuenta? Registrate ahora</string>
+    <string name="Switch">Mostrar contraseña</string>
+    <string name="Description">¿Aún no tienes cuenta? Regístrate ahora</string>
     <string name="title">Bienvenido a FIC+</string>
     <string name="Facebook">Imagen facebook</string>
     <string name="Google">imagen google</string>
-    <!--sing up-->
+    <!--registro-->
     <string name="title2">Registrate</string>
-    <string name="Description2">¿Ya tiene cuenta? Inicie sesion ahora</string>
+    <string name="Description2">¿Ya tiene cuenta? Inicie sesión ahora</string>
     <string name="Name">Nombre</string>
     <string name="Name2">Apellido</string>
     <string name="RepContra">Repetir contraseña</string>
