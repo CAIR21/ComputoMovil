@@ -1,11 +1,377 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/Background2"
-    tools:context=".MainActivity">
+    android:background="@color/black"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="false"
+        android:layout_height="match_parent"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ClNavbar"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="400dp">
+            <ImageView
+                android:id="@+id/Portada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/banner"
+                android:scaleType="centerCrop"
+                android:src="@drawable/effect_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/app_name" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ClHeader"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="30dp"
+                android:padding="15dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_search"
+                    android:layout_marginEnd="@dimen/margin_right_search"
+                    app:layout_constraintEnd_toStartOf="@+id/IvUsuario"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:contentDescription="@string/app_name"
+                    />
+                <ImageView
+                    android:id="@+id/IvUsuario"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_profile"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:contentDescription="@string/app_name"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ClHeader"
+                android:layout_marginHorizontal="60dp"
+                >
+                <TextView
+                    android:id="@+id/TvSerie"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size_title"
+                    tools:ignore="SpUsage" />
+                <TextView
+                    android:id="@+id/Peliculas"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title4"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size_title"
+                    tools:ignore="SpUsage" />
+                <TextView
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title3"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size_title"
+                    tools:ignore="SpUsage"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                >
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="15dp">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/BtnLista"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_list"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text"
+                    app:icon="@drawable/ic_plus"
+                    app:iconGravity="top"
+                    app:iconTint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="SpUsage" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/BtnPlayMovie"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/button_play"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    app:icon="@drawable/ic_play"
+                    app:iconTint="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/BtnInfo"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_info"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text"
+                    app:icon="@drawable/ic_info"
+                    app:iconGravity="top"
+                    app:iconTint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="SpUsage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/TxtAccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ClNavbar"
+            android:text="@string/edtAccion"
+            android:padding="@dimen/paddin_title_rv"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sixe_title_rv"
+            tools:ignore="SpUsage" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvAccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/TxtAccion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/TxtTerror"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/RvAccion"
+            android:text="@string/edtTerror"
+            android:padding="@dimen/paddin_title_rv"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sixe_title_rv"
+            tools:ignore="SpUsage"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvTerror"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/TxtTerror"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/TxtAnimacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/RvTerror"
+            android:text="@string/edtAnimacion"
+            android:padding="@dimen/paddin_title_rv"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sixe_title_rv"
+            tools:ignore="SpUsage"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvAnimacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/TxtAnimacion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/TxtSuspenso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/RvAnimacion"
+            android:text="@string/edtSuspenso"
+            android:padding="@dimen/paddin_title_rv"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sixe_title_rv"
+            tools:ignore="SpUsage"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvSuspenso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/TxtSuspenso"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/TxtDrama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/RvSuspenso"
+            android:text="@string/edtDrama"
+            android:padding="@dimen/paddin_title_rv"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sixe_title_rv"
+            tools:ignore="SpUsage"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvDrama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/TxtDrama"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/TxtComedia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/RvDrama"
+            android:text="@string/edtComedia"
+            android:padding="@dimen/paddin_title_rv"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sixe_title_rv"
+            tools:ignore="SpUsage"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvComedia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/TxtComedia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/TxtMisterio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/RvComedia"
+            android:text="@string/edtMisterio"
+            android:padding="@dimen/paddin_title_rv"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sixe_title_rv"
+            tools:ignore="SpUsage"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvMisterio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/TxtMisterio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/TxtInfantiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/RvMisterio"
+            android:text="@string/edtInfantiles"
+            android:padding="@dimen/paddin_title_rv"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sixe_title_rv"
+            tools:ignore="SpUsage"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvInfantiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/TxtInfantiles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/TxtAnime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/RvInfantiles"
+            android:text="@string/edtAnime"
+            android:padding="@dimen/paddin_title_rv"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sixe_title_rv"
+            tools:ignore="SpUsage"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvAnime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/TxtAnime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -19,4 +19,23 @@
     <string name="Name2">Apellido</string>
     <string name="RepContra">Repetir contraseña</string>
     <string name="LogoReg">LogoReg</string>
+    <!--menu-->
+    <string name="button_list">Mi lista</string>
+    <string name="button_info">Información</string>
+    <string name="button_play">Reproducir</string>
+    <string name="title1">Series</string>
+    <string name="title4">Películas</string>
+    <string name="title3">Categorías</string>
+    <string name="categorie1">De Misterio</string>
+    <string name="edtAccion">Accion</string>
+    <string name="edtTerror">Terror</string>
+    <string name="edtAnimacion">Animacion</string>
+    <string name="edtSuspenso">Suspenso</string>
+    <string name="edtDrama">Drama</string>
+    <string name="edtComedia">Comedia</string>
+    <string name="edtMisterio">Misterio</string>
+    <string name="edtInfantiles">Infantiles</string>
+    <string name="edtAnime">Anime</string>
+
+
 </resources>

@@ -1,6 +1,5 @@
-package servicio;
+package com.CAIR.fic.servicio;
 
-// ApiService.java
 import com.CAIR.fic.api.Respuesta;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -8,7 +7,6 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 public interface IUsuarios{
-    // Definir los endpoints de la API aquí
 
     @FormUrlEncoded
     @POST("login")
