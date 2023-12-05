@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.CAIR.fic.R;
 import com.CAIR.fic.datos.Pelicula;
 import com.bumptech.glide.Glide;
@@ -20,6 +19,7 @@ public class DetallesPeliculaActivity extends BottomSheetDialogFragment {
     private TextView tvTitulo;
     private TextView tvDescripcion;
     private TextView tvCategoria;
+    private TextView tvDirector;
     private Button btnReproducir;
     private ImageView ivBanner;
 
@@ -31,8 +31,10 @@ public class DetallesPeliculaActivity extends BottomSheetDialogFragment {
         tvTitulo = view.findViewById(R.id.tvTitulo);
         tvDescripcion = view.findViewById(R.id.tvDescripcion);
         tvCategoria = view.findViewById(R.id.tvCategoria);
+        tvDirector = view.findViewById(R.id.tvDirector);
         btnReproducir = view.findViewById(R.id.btnReproducir);
         ivBanner = view.findViewById(R.id.ivBanner);
+
 
         // Obtener la información de la película del argumento
         Bundle bundle = getArguments();
@@ -42,7 +44,8 @@ public class DetallesPeliculaActivity extends BottomSheetDialogFragment {
                 // Configurar la información en los elementos de la interfaz
                 tvTitulo.setText(pelicula.getTitulo());
                 tvDescripcion.setText(pelicula.getDescripcion());
-                tvCategoria.setText(pelicula.getID_Categoria());
+                tvCategoria.setText("Categoria: " + pelicula.getID_Categoria());
+                tvDirector.setText("Director: "+ pelicula.getDirector());
 
                 // Puedes usar Glide o cualquier biblioteca de carga de imágenes para cargar el banner
                 Glide.with(requireContext())

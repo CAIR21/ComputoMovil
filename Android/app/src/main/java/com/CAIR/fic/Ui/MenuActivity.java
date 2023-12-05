@@ -1,23 +1,23 @@
-package com.CAIR.fic;
+package com.CAIR.fic.Ui;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.CAIR.fic.servicio.IPeliculas;
+
+import com.CAIR.fic.R;
+import com.CAIR.fic.api.DetallesPeliculaActivity;
 import com.CAIR.fic.datos.Pelicula;
+import com.CAIR.fic.datos.PeliculaAdapter;
+import com.CAIR.fic.api.Conexion;
+import com.CAIR.fic.servicio.IPeliculas;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.CAIR.fic.datos.PeliculaAdapter;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-
-import com.CAIR.fic.api.DetallesPeliculaActivity;
 
 public class MenuActivity extends AppCompatActivity implements PeliculaAdapter.OnItemClickListener {
     private RecyclerView RvAccion;
@@ -123,12 +123,7 @@ public class MenuActivity extends AppCompatActivity implements PeliculaAdapter.O
     }
 
     private void getPosts() {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://fic-plus.000webhostapp.com/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        IPeliculas IPeliculas = retrofit.create(IPeliculas.class);
-        Call<List<Pelicula>> call = IPeliculas.getPosts();
+        Call<List<Pelicula>> call = Conexion.getDatos().create(IPeliculas.class).getPosts();
         call.enqueue(new Callback<List<Pelicula>>() {
             @Override
             public void onResponse(Call<List<Pelicula>> call, Response<List<Pelicula>> response) {

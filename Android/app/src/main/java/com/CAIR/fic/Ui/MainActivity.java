@@ -1,4 +1,4 @@
-package com.CAIR.fic;
+package com.CAIR.fic.Ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.Switch;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.CAIR.fic.R;
 import com.CAIR.fic.api.Conexion;
 import com.CAIR.fic.api.Respuesta;
 import retrofit2.Call;
