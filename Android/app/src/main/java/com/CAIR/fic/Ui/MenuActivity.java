@@ -1,12 +1,13 @@
 package com.CAIR.fic.Ui;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.CAIR.fic.R;
-import com.CAIR.fic.api.DetallesPeliculaActivity;
+import com.CAIR.fic.datos.DetallesPeliculaActivity;
 import com.CAIR.fic.datos.Pelicula;
 import com.CAIR.fic.datos.PeliculaAdapter;
 import com.CAIR.fic.api.Conexion;
@@ -55,15 +56,15 @@ public class MenuActivity extends AppCompatActivity implements PeliculaAdapter.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        RvAccion = findViewById(R.id.RvAccion);
-        RvTerror = findViewById(R.id.RvTerror);
-        RvAnimacion = findViewById(R.id.RvAnimacion);
-        RvSuspenso = findViewById(R.id.RvSuspenso);
-        RvDrama = findViewById(R.id.RvDrama);
-        RvComedia = findViewById(R.id.RvComedia);
-        RvMisterio = findViewById(R.id.RvMisterio);
-        RvInfantiles = findViewById(R.id.RvInfantiles);
-        RvAnime = findViewById(R.id.RvAnime);
+        RvAccion = findViewById(R.id.rvAccion);
+        RvTerror = findViewById(R.id.rvTerror);
+        RvAnimacion = findViewById(R.id.rvAnimacion);
+        RvSuspenso = findViewById(R.id.rvSuspenso);
+        RvDrama = findViewById(R.id.rvDrama);
+        RvComedia = findViewById(R.id.rvComedia);
+        RvMisterio = findViewById(R.id.rvMisterio);
+        RvInfantiles = findViewById(R.id.rvInfantiles);
+        RvAnime = findViewById(R.id.rvAnime);
 
         LinearLayoutManager accionLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         RvAccion.setLayoutManager(accionLayoutManager);
@@ -123,8 +124,9 @@ public class MenuActivity extends AppCompatActivity implements PeliculaAdapter.O
     }
 
     private void getPosts() {
-        Call<List<Pelicula>> call = Conexion.getDatos().create(IPeliculas.class).getPosts();
+        Call<List<Pelicula>> call = Conexion.getDatos().create(IPeliculas.class).getPeliculas();
         call.enqueue(new Callback<List<Pelicula>>() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onResponse(Call<List<Pelicula>> call, Response<List<Pelicula>> response) {
                 if (!response.isSuccessful()) {

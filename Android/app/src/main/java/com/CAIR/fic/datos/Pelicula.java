@@ -16,7 +16,6 @@ public class Pelicula implements Serializable {
     private String Banner_Pelicula;
 
 
-    // Métodos getter
     public int getID_Peliculas() {
         return ID_Peliculas;
     }
@@ -60,4 +59,7 @@ public class Pelicula implements Serializable {
     public String getBanner_Pelicula() {
         return Banner_Pelicula;
     }
+
+
+
 }

@@ -10,14 +10,14 @@ public interface IUsuarios{
 
     @FormUrlEncoded
     @POST("login")
-    Call<Respuesta> loginUser(
+    Call<Respuesta> loginUsuario(
             @Field("email") String correo,
             @Field("password") String contrasenia
     );
 
     @FormUrlEncoded
     @POST("usuarios")
-    Call<Respuesta> registerUser(
+    Call<Respuesta> registroUsuario(
             @Field("Nombre_Usuario") String nombre,
             @Field("Apellido_Usuario") String apellido,
             @Field("Correo") String correo,

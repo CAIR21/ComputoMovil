@@ -1,32 +1,33 @@
 package com.CAIR.fic.datos;
 
-
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
+
 import com.CAIR.fic.R;
 
 import java.util.List;
 
 public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.PeliculaViewHolder> {
 
-    private List<Pelicula> listaPeliculas;
+    private List<Pelicula> ListaPeliculas;
     private Context context;
-    private OnItemClickListener listener;
+    private OnItemClickListener Listener;
 
     public interface OnItemClickListener {
         void onItemClick(Pelicula pelicula);
     }
 
     public PeliculaAdapter(List<Pelicula> listaPeliculas, OnItemClickListener listener) {
-        this.listaPeliculas = listaPeliculas;
-        this.listener = listener;
+        this.ListaPeliculas = listaPeliculas;
+        this.Listener = listener;
     }
 
     @NonNull
@@ -40,23 +41,18 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
 
     @Override
     public void onBindViewHolder(@NonNull PeliculaViewHolder holder, int position) {
-        Pelicula pelicula = listaPeliculas.get(position);
+        Pelicula pelicula = ListaPeliculas.get(position);
 
         Glide.with(holder.itemView.getContext())
                 .load(pelicula.getPoster_Pelicula())
                 .into(holder.ivMovie);
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listener.onItemClick(pelicula);
-            }
-        });
+        holder.itemView.setOnClickListener(v -> Listener.onItemClick(pelicula));
     }
 
     @Override
     public int getItemCount() {
-        return listaPeliculas.size();
+        return ListaPeliculas.size();
     }
 
     static class PeliculaViewHolder extends RecyclerView.ViewHolder {
@@ -64,12 +60,7 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
 
         PeliculaViewHolder(@NonNull View itemView) {
             super(itemView);
-            ivMovie = itemView.findViewById(R.id.iv_movie);
+            ivMovie = itemView.findViewById(R.id.ivMovie);
         }
-    }
-
-    public void setListaPeliculas(List<Pelicula> listaPeliculas) {
-        this.listaPeliculas = listaPeliculas;
-        notifyDataSetChanged();
     }
 }

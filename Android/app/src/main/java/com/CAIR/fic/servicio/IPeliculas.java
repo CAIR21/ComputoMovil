@@ -9,5 +9,5 @@ import retrofit2.http.GET;
 
 public interface IPeliculas {
     @GET("peliculas")
-    Call<List<Pelicula>> getPosts();
+    Call<List<Pelicula>> getPeliculas();
 }

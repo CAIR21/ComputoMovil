@@ -1,14 +1,14 @@
 package com.CAIR.fic.api;
 
 public class Respuesta {
-    private boolean success;
-    private String message;
+    private boolean Success;
+    private String Message;
 
     public boolean isSuccess() {
-        return success;
+        return Success;
     }
 
     public String getMessage() {
-        return message;
+        return Message;
     }
 }

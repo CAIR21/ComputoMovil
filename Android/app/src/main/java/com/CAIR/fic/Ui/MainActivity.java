@@ -12,40 +12,41 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.CAIR.fic.R;
 import com.CAIR.fic.api.Conexion;
 import com.CAIR.fic.api.Respuesta;
+import com.CAIR.fic.servicio.IUsuarios;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import com.CAIR.fic.servicio.IUsuarios;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etCorreo;
-    private EditText etContrasenia;
-    private Switch switchMostrarContrasenia;
+    private EditText EdtCorreo;
+    private EditText EdtContrasenia;
+    private Switch SwitchMostrarContrasenia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etCorreo = findViewById(R.id.edtCorreo);
-        etContrasenia = findViewById(R.id.edtContra);
-        switchMostrarContrasenia = findViewById(R.id.switchMostrarContrasena);
+        EdtCorreo = findViewById(R.id.edtCorreo);
+        EdtContrasenia = findViewById(R.id.edtContra);
+        SwitchMostrarContrasenia = findViewById(R.id.switchMostrarContrasena);
 
-        Button btnLogin = findViewById(R.id.btnIniciarSesion);
-        btnLogin.setOnClickListener(view -> loginUser());
+        Button BtnLogin = findViewById(R.id.btnIniciarSesion);
+        BtnLogin.setOnClickListener(view -> loginUsuario());
 
-        Button btnRegister = findViewById(R.id.btnRegistrarse);
-        btnRegister.setOnClickListener(view -> IrAlRegistro());
+        Button BtnRegister = findViewById(R.id.btnRegistrarse);
+        BtnRegister.setOnClickListener(view -> irAlRegistro());
 
-        switchMostrarContrasenia.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            showHidePassword(isChecked);
+        SwitchMostrarContrasenia.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            mostrarOcultarContra(isChecked);
         });
     }
 
-    private void loginUser() {
-        String Correo = etCorreo.getText().toString().trim();
-        String Contrasenia = etContrasenia.getText().toString().trim();
+    private void loginUsuario() {
+        String Correo = EdtCorreo.getText().toString().trim();
+        String Contrasenia = EdtContrasenia.getText().toString().trim();
 
         if (Correo.isEmpty() || Contrasenia.isEmpty()) {
             showToast("Complete todos los campos.");
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         IUsuarios apiService = Conexion.getDatos().create(IUsuarios.class);
 
-        Call<Respuesta> call = apiService.loginUser(Correo, Contrasenia);
+        Call<Respuesta> call = apiService.loginUsuario(Correo, Contrasenia);
         call.enqueue(new Callback<Respuesta>() {
             @Override
             public void onResponse(Call<Respuesta> call, Response<Respuesta> response) {
@@ -77,10 +78,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void showToast(final String texto) {
+    private void showToast(final String Texto) {
         runOnUiThread(() -> {
-            if (texto != null) {
-                Toast.makeText(MainActivity.this, texto, Toast.LENGTH_SHORT).show();
+            if (Texto != null) {
+                Toast.makeText(MainActivity.this, Texto, Toast.LENGTH_SHORT).show();
             }else{
                 Intent intent = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(intent);
@@ -89,16 +90,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void IrAlRegistro() {
+    private void irAlRegistro() {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
 
-    private void showHidePassword(boolean show) {
-        if (show) {
-            etContrasenia.setTransformationMethod(null);
+    private void mostrarOcultarContra(boolean Mostar) {
+        if (Mostar) {
+            EdtContrasenia.setTransformationMethod(null);
         } else {
-            etContrasenia.setTransformationMethod(new PasswordTransformationMethod());
+            EdtContrasenia.setTransformationMethod(new PasswordTransformationMethod());
         }
     }
 }

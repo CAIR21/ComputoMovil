@@ -9,9 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:fitsSystemWindows="false"
-        android:layout_height="match_parent"
-
-        >
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/ClNavbar"
@@ -19,7 +17,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_height="400dp">
             <ImageView
-                android:id="@+id/Portada"
+                android:id="@+id/portada"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/banner"
@@ -30,7 +28,7 @@
                 android:contentDescription="@string/app_name" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/ClHeader"
+                android:id="@+id/clHeader"
                 android:layout_width="match_parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="30dp"
@@ -50,13 +48,13 @@
                     android:layout_height="25dp"
                     android:src="@drawable/ic_search"
                     android:layout_marginEnd="@dimen/margin_right_search"
-                    app:layout_constraintEnd_toStartOf="@+id/IvUsuario"
+                    app:layout_constraintEnd_toStartOf="@+id/ivUsuario"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:contentDescription="@string/app_name"
                     />
                 <ImageView
-                    android:id="@+id/IvUsuario"
+                    android:id="@+id/ivUsuario"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:src="@drawable/ic_profile"
@@ -72,11 +70,11 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ClHeader"
+                app:layout_constraintTop_toBottomOf="@+id/clHeader"
                 android:layout_marginHorizontal="60dp"
                 >
                 <TextView
-                    android:id="@+id/TvSerie"
+                    android:id="@+id/tvSerie"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     android:layout_width="wrap_content"
@@ -87,7 +85,7 @@
                     android:textSize="@dimen/size_title"
                     tools:ignore="SpUsage" />
                 <TextView
-                    android:id="@+id/Peliculas"
+                    android:id="@+id/peliculas"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +125,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:layout_editor_absoluteX="15dp">
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/BtnLista"
+                    android:id="@+id/btnLista"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -143,7 +141,7 @@
                     tools:ignore="SpUsage" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/BtnPlayMovie"
+                    android:id="@+id/btnPlayMovie"
                     style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -159,7 +157,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/BtnInfo"
+                    android:id="@+id/btnInfo"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -176,7 +174,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <TextView
-            android:id="@+id/TxtAccion"
+            android:id="@+id/txtAccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/ClNavbar"
@@ -188,19 +186,19 @@
             tools:ignore="SpUsage" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RvAccion"
+            android:id="@+id/rvAccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/TxtAccion"
+            app:layout_constraintTop_toBottomOf="@+id/txtAccion"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
 
         <TextView
-            android:id="@+id/TxtTerror"
+            android:id="@+id/txtTerror"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/RvAccion"
+            app:layout_constraintTop_toBottomOf="@+id/rvAccion"
             android:text="@string/edtTerror"
             android:padding="@dimen/paddin_title_rv"
             android:textColor="@color/white"
@@ -209,19 +207,19 @@
             tools:ignore="SpUsage"
             />
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RvTerror"
+            android:id="@+id/rvTerror"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/TxtTerror"
+            app:layout_constraintTop_toBottomOf="@+id/txtTerror"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
 
         <TextView
-            android:id="@+id/TxtAnimacion"
+            android:id="@+id/txtAnimacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/RvTerror"
+            app:layout_constraintTop_toBottomOf="@+id/rvTerror"
             android:text="@string/edtAnimacion"
             android:padding="@dimen/paddin_title_rv"
             android:textColor="@color/white"
@@ -231,19 +229,19 @@
             />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RvAnimacion"
+            android:id="@+id/rvAnimacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/TxtAnimacion"
+            app:layout_constraintTop_toBottomOf="@+id/txtAnimacion"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
 
         <TextView
-            android:id="@+id/TxtSuspenso"
+            android:id="@+id/txtSuspenso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/RvAnimacion"
+            app:layout_constraintTop_toBottomOf="@+id/rvAnimacion"
             android:text="@string/edtSuspenso"
             android:padding="@dimen/paddin_title_rv"
             android:textColor="@color/white"
@@ -253,19 +251,19 @@
             />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RvSuspenso"
+            android:id="@+id/rvSuspenso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/TxtSuspenso"
+            app:layout_constraintTop_toBottomOf="@+id/txtSuspenso"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
 
         <TextView
-            android:id="@+id/TxtDrama"
+            android:id="@+id/txtDrama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/RvSuspenso"
+            app:layout_constraintTop_toBottomOf="@+id/rvSuspenso"
             android:text="@string/edtDrama"
             android:padding="@dimen/paddin_title_rv"
             android:textColor="@color/white"
@@ -275,19 +273,19 @@
             />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RvDrama"
+            android:id="@+id/rvDrama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/TxtDrama"
+            app:layout_constraintTop_toBottomOf="@+id/txtDrama"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
 
         <TextView
-            android:id="@+id/TxtComedia"
+            android:id="@+id/txtComedia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/RvDrama"
+            app:layout_constraintTop_toBottomOf="@+id/rvDrama"
             android:text="@string/edtComedia"
             android:padding="@dimen/paddin_title_rv"
             android:textColor="@color/white"
@@ -297,19 +295,19 @@
             />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RvComedia"
+            android:id="@+id/rvComedia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/TxtComedia"
+            app:layout_constraintTop_toBottomOf="@+id/txtComedia"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
 
         <TextView
-            android:id="@+id/TxtMisterio"
+            android:id="@+id/txtMisterio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/RvComedia"
+            app:layout_constraintTop_toBottomOf="@+id/rvComedia"
             android:text="@string/edtMisterio"
             android:padding="@dimen/paddin_title_rv"
             android:textColor="@color/white"
@@ -319,19 +317,19 @@
             />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RvMisterio"
+            android:id="@+id/rvMisterio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/TxtMisterio"
+            app:layout_constraintTop_toBottomOf="@+id/txtMisterio"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
 
         <TextView
-            android:id="@+id/TxtInfantiles"
+            android:id="@+id/txtInfantiles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/RvMisterio"
+            app:layout_constraintTop_toBottomOf="@+id/rvMisterio"
             android:text="@string/edtInfantiles"
             android:padding="@dimen/paddin_title_rv"
             android:textColor="@color/white"
@@ -341,19 +339,19 @@
             />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RvInfantiles"
+            android:id="@+id/rvInfantiles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/TxtInfantiles"
+            app:layout_constraintTop_toBottomOf="@+id/txtInfantiles"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
 
         <TextView
-            android:id="@+id/TxtAnime"
+            android:id="@+id/txtAnime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/RvInfantiles"
+            app:layout_constraintTop_toBottomOf="@+id/rvInfantiles"
             android:text="@string/edtAnime"
             android:padding="@dimen/paddin_title_rv"
             android:textColor="@color/white"
@@ -363,10 +361,10 @@
             />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RvAnime"
+            android:id="@+id/rvAnime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/TxtAnime"
+            app:layout_constraintTop_toBottomOf="@+id/txtAnime"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
