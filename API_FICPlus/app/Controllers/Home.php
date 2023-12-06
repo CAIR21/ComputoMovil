@@ -12,4 +12,12 @@ class Home extends BaseController
     public function inicio(){
         return view("login2.php");
     }
+
+    public function Menu_Principal(){
+        return view("Menu_PrincipalCanon.php");
+    }
+
+    public function Registrar(){
+        return view("Register2.php");
+    }
 }

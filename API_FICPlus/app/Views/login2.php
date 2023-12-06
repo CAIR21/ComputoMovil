@@ -55,14 +55,14 @@
                 <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
                 <div class="input-group-append">
                   <button class="btn btn-outline-secondary" type="button" id="togglePassword">
-                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <i  class="fa fa-eye" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
             </div>
             <button type="submit" onclick="Iniciar()" class="btn btn-primary btn-block">Iniciar Sesión</button>
-            <button type="submit" class="btn btn-warning btn-block">Registrarme</button>
           </form>
+          <button onclick="registro()" class="btn btn-warning btn-block">Registrarme</button>
         </div>
       </div>
     </div>
@@ -80,7 +80,10 @@
     passwordInput.setAttribute('type', type);
   });
 
+  function registro(){
+    window.location.href='<?= base_url('Registro')?>';
 
+  }
   function Iniciar(){
     console.log("Entró");
     var correo = $('#email').val();
@@ -106,7 +109,6 @@
                 alert('Error al procesar la solicitud.');
             }
         });
-    
   }
 </script>
 

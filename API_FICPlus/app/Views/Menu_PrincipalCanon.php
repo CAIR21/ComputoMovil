@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.0/css/all.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <style>
   .d-inline{
     transition: transform 0.3s ease, border 0.3s ease; /* Transiciones suaves */
@@ -20,6 +21,49 @@
   }
     </style>
     <script>
+      $.ajax({
+            type: 'GET',
+            url: '<?= base_url('peliculas') ?>', // Ruta al controlador y método
+            dataType: 'json',
+              success: function(response) {
+                // Maneja la respuesta del servidor
+              console.log(response);
+              procesarDatos(response);
+              },
+              error: function(error) {
+                // Maneja errores de la solicitud
+              console.log(error);
+              alert('Error al procesar el formulario');
+              }
+         });
+
+         function procesarDatos(DatosJson){
+        var cantidadElementos = DatosJson.length; // Puedes obtener esto desde la respuesta de la base de datos
+        // Carruseles superiores
+        // Obtén el contenedor donde deseas agregar los divs
+        var contenedor = document.getElementById('CarruselSuperior');
+
+        // Crea divs dinámicamente y añádelos al contenedor
+        for (var i = 0; i < 3; i++) {
+            var nuevoDiv = document.createElement('div');
+            if(i == 0){
+              nuevoDiv.className = 'carousel-item active';
+            }
+            else{
+              nuevoDiv.className = 'carousel-item';
+            }
+            
+            var nuevoImg = document.createElement('img');
+            nuevoImg.src = DatosJson[i].Banner_Pelicula;
+            nuevoImg.className = 'd-block shadow-lg mx-auto w-75 rounded-4';
+            
+            nuevoImg.alt = DatosJson[i].Titulo;
+            nuevoDiv.appendChild(nuevoImg);
+            contenedor.appendChild(nuevoDiv);
+        }
+        // Carruseles superiores
+        }
+
       document.addEventListener('DOMContentLoaded', function () {
         var carruselItems = document.querySelectorAll('.d-inline');
     
@@ -133,16 +177,7 @@
     <!-- Carruseles superiores -->
     <div class="container mt-4" >
         <div id="carouselExampleRide" class="carousel slide  rounded-4" data-bs-ride="true">
-            <div class="carousel-inner" style="overflow-y: visible; ">
-              <div class="carousel-item active">
-                <img src="IMG/5.png" class="d-block shadow-lg mx-auto w-75  rounded-4" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="IMG/6.png" class="d-block shadow-lg mx-auto w-75  rounded-4" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="IMG/7.png" class="d-block shadow-lg mx-auto w-75  rounded-4" alt="...">
-              </div>
+            <div class="carousel-inner overflow-y-visible" id="CarruselSuperior">
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -158,29 +193,16 @@
     <h1 class="text-white mt-3 text-center">Recomendados</h1>
     <!-- carruseles inferiores -->
         <div id="carouselExample2" class="carousel slide mx-auto" >
-                <div class="carousel-inner mt-2 "><!-- no mover el width del inner -->
+                <div class="carousel-inner mt-2 overflow-y-visible"><!-- no mover el width del inner -->
                     <div class="carousel-item active text-center" >
                       <img src="IMG/8.jpg" class="d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;"> 
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                       <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
                     <div class="carousel-item text-center">
                       <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;"> 
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
                     <div class="carousel-item text-center">
                       <img src="IMG/18.jpg" class="d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;"> 
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                       <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
             </div>
@@ -197,29 +219,15 @@
     <h1 class="text-white mt-3 text-center">Proximamente...</h1>
     <!-- carruseles inferiores 2 -->
         <div id="carouselExample3" class="carousel slide mx-auto" >
-                <div class="carousel-inner mt-2 " style="overflow-y: visible;"><!-- no mover el width del inner -->
+                <div class="carousel-inner mt-2 overflow-y-visible"><!-- no mover el width del inner -->
                     <div class="carousel-item active text-center" >
                      <img src="https://fic-plus.000webhostapp.com/IMG/13.jpg" class="d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                     <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;"> 
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
+                     <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
                     <div class="carousel-item text-center">
                       <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;"> 
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
                     <div class="carousel-item text-center">
-                      <img src="IMG/18.jpg" class="d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;"> 
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                       <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
             </div>

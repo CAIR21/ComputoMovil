@@ -23,21 +23,32 @@ class PeliculasController extends ResourceController
      *
      * @return mixed
      */
-    public function showall()
-    {
+    public function showall(){
         $ModeloPeliculas = new Peliculas();
         $ModeloCategorias = new Categorias();
-        //Busca las categorias
-        $Categorias = $ModeloCategorias->findAll();
-        //Crea el archivo de los datos dividiendo las peliculas por  categorias
-        for($i = 0;$i<count($Categorias);$i++){
-            
-        $categoria = $Categorias[$i]['Categoria'];
-        $peliculas = $ModeloPeliculas->getWhere(['ID_Categoria' => $Categorias[$i]['ID_Categorias']])->getResult();
-        $Datos[$categoria] = $peliculas;
+        $peliculas = $ModeloPeliculas->findAll();
+        for($i = 0;$i<count($peliculas);$i++){
+            $Categoria = $ModeloCategorias->getWhere(['ID_Categorias' => $peliculas[$i]['ID_Categoria']])->getRow();
+            $peliculas[$i]['ID_Categoria'] = $Categoria->Categoria;
         }
-        return $this->response->setJSON($Datos);
+        return $this->response->setJSON($peliculas);
     }
+    // public function showall()
+    // {
+    //     $ModeloPeliculas = new Peliculas();
+    //     $ModeloCategorias = new Categorias();
+    //     //Busca las categorias
+    //     $Categorias = $ModeloCategorias->findAll();
+    //     //Crea el archivo de los datos dividiendo las peliculas por  categorias
+    //     for($i = 0;$i<count($Categorias);$i++){
+    //     $categoria = $Categorias[$i]['Categoria'];
+    //     $peliculas = $ModeloPeliculas->getWhere(['ID_Categoria' => $Categorias[$i]['ID_Categorias']])->getResult();
+    //     $Datos[$categoria] = $peliculas;
+    //     }
+    //     return $this->response->setJSON($Datos);
+    // }
+
+
     // public function show($id = null)
     // {
     //     $ModeloPeliculas = new Peliculas();
