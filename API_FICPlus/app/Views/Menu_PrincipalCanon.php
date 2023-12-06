@@ -37,7 +37,7 @@
               }
          });
 
-         function procesarDatos(DatosJson){
+        function procesarDatos(DatosJson){
         var cantidadElementos = DatosJson.length; // Puedes obtener esto desde la respuesta de la base de datos
         // Carruseles superiores
         // Obtén el contenedor donde deseas agregar los divs
@@ -55,17 +55,39 @@
             
             var nuevoImg = document.createElement('img');
             nuevoImg.src = DatosJson[i].Banner_Pelicula;
-            nuevoImg.className = 'd-block shadow-lg mx-auto w-75 rounded-4';
+            nuevoImg.className = 'CarruselImagen d-block shadow-lg mx-auto w-75 rounded-4';
             
             nuevoImg.alt = DatosJson[i].Titulo;
             nuevoDiv.appendChild(nuevoImg);
             contenedor.appendChild(nuevoDiv);
         }
         // Carruseles superiores
+        // Carruseles inferior 1
+        var carruselinferior1 = document.getElementById('CarruselInferior1');
+        for (var i = 0; i < 3; i++) {
+            var nuevoDiv = document.createElement('div');
+            if(i == 0){
+              nuevoDiv.className = 'carousel-item active text-center';
+            }
+            else{
+              nuevoDiv.className = 'carousel-item text-center';
+            }
+
+            for (var j = 0;j < 8; j++){
+              var nuevoImg = document.createElement('img');
+              nuevoImg.src = DatosJson[j].Poster_Pelicula;
+              nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4';
+              nuevoImg.alt = DatosJson[j].Titulo;
+              nuevoImg.style = "height: 250px; width: auto;";
+              nuevoDiv.appendChild(nuevoImg);
+            }
+            carruselinferior1.appendChild(nuevoDiv);
+        }
+        // Carruseles inferior 1
         }
 
       document.addEventListener('DOMContentLoaded', function () {
-        var carruselItems = document.querySelectorAll('.d-inline');
+        var carruselItems = document.querySelectorAll('CarruselImagen');
     
         carruselItems.forEach(function (item) {
           item.addEventListener('mouseenter', function () {
@@ -193,17 +215,15 @@
     <h1 class="text-white mt-3 text-center">Recomendados</h1>
     <!-- carruseles inferiores -->
         <div id="carouselExample2" class="carousel slide mx-auto" >
-                <div class="carousel-inner mt-2 overflow-y-visible"><!-- no mover el width del inner -->
+                <div class="carousel-inner mt-2 overflow-y-visible" id="CarruselInferior1"><!-- no mover el width del inner -->
                     <div class="carousel-item active text-center" >
-                      <img src="IMG/8.jpg" class="d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
+                      <img src="IMG/8.jpg" class="CarruselImagen d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
                     <div class="carousel-item text-center">
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
+                      <img src="IMG/20.jpg" class="CarruselImagen d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
                     <div class="carousel-item text-center">
-                      <img src="IMG/18.jpg" class="d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
+                      <img src="IMG/18.jpg" class="CarruselImagen d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
@@ -221,14 +241,13 @@
         <div id="carouselExample3" class="carousel slide mx-auto" >
                 <div class="carousel-inner mt-2 overflow-y-visible"><!-- no mover el width del inner -->
                     <div class="carousel-item active text-center" >
-                     <img src="https://fic-plus.000webhostapp.com/IMG/13.jpg" class="d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                     <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
+                     <img src="https://fic-plus.000webhostapp.com/IMG/13.jpg" class="CarruselImagen d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
                     <div class="carousel-item text-center">
-                      <img src="IMG/20.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
+                      <img src="IMG/20.jpg" class="CarruselImagen d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
                     <div class="carousel-item text-center">
-                      <img src="IMG/18.jpg" class="d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
+                      <img src="IMG/18.jpg" class="CarruselImagen d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
                     </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">

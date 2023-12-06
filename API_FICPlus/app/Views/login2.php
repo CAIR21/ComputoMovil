@@ -38,7 +38,7 @@
   Tu navegador no soporta el elemento de video.
 </video>
 
-<div class="container-fluid" style="margin-top: 45vh;">
+<div class="opacity-25 container-fluid" style="margin-top: 45vh;">
   <div class="row h-100 justify-content-center align-items-center" id="login-container">
     <div class="col-sm-6 col-md-4">
       <div class="card">
