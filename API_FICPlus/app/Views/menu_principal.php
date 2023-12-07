@@ -176,11 +176,11 @@ body{
         <div class="carousel-inner" id="CarruselSuperior">
           <!--Esta linea de codigo Lee lo que se obtuvo de la base de datos-->
                 <!-- <div href="../Paginas/peliculas.php?id" class="carousel-caption d-none d-md-block">
-                  <h1>Bienvenido de Vuelta</h1>
-                  <h5>titulo</h5>
-                  <p>descripcion</p>
-                </div> -->
-          </div>
+                <h1>Bienvenido de Vuelta</h1>
+                <h5>titulo</h5>
+                <p>descripcion</p>
+          </div> -->
+        </div>
         </div>
       </div>
       
