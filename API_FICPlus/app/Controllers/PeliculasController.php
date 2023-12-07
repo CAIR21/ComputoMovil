@@ -33,6 +33,12 @@ class PeliculasController extends ResourceController
         }
         return $this->response->setJSON($peliculas);
     }
+
+    public function showall_terror(){
+        $ModeloPeliculas = new Peliculas();
+        $peliculas = $ModeloPeliculas->getWhere(['ID_Categoria' => 2])->getResult();
+        return $this->response->setJSON($peliculas);
+    }
     // public function showall()
     // {
     //     $ModeloPeliculas = new Peliculas();

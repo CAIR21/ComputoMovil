@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <style>
-  .d-inline{
+  .CarruselImagen{
     transition: transform 0.3s ease, border 0.3s ease; /* Transiciones suaves */
   }
-  .d-inline.hover{
+  .CarruselImagen:hover{
     transform: scale(0.9); /* Hacer que la imagen sea un 10% más grande */
     border: 2px solid white; /* Agregar un borde blanco de 2px */
     transition: transform 0.3s ease, border 0.3s ease; /* Agregar transiciones suaves */
@@ -37,6 +37,8 @@
               }
          });
 
+         
+
         function procesarDatos(DatosJson){
         var cantidadElementos = DatosJson.length; // Puedes obtener esto desde la respuesta de la base de datos
         // Carruseles superiores
@@ -56,49 +58,77 @@
             var nuevoImg = document.createElement('img');
             nuevoImg.src = DatosJson[i].Banner_Pelicula;
             nuevoImg.className = 'CarruselImagen d-block shadow-lg mx-auto w-75 rounded-4';
-            
+            nuevoImg.style = "cursor:pointer;";
             nuevoImg.alt = DatosJson[i].Titulo;
             nuevoDiv.appendChild(nuevoImg);
             contenedor.appendChild(nuevoDiv);
         }
         // Carruseles superiores
         // Carruseles inferior 1
+      
         var carruselinferior1 = document.getElementById('CarruselInferior1');
         for (var i = 0; i < 3; i++) {
             var nuevoDiv = document.createElement('div');
             if(i == 0){
-              nuevoDiv.className = 'carousel-item active text-center';
+              nuevoDiv.className = 'carousel-item active text-center m-0 p-0';
             }
             else{
               nuevoDiv.className = 'carousel-item text-center';
             }
 
-            for (var j = 0;j < 8; j++){
+            for (var j = 0;j < 6; j++){
               var nuevoImg = document.createElement('img');
               nuevoImg.src = DatosJson[j].Poster_Pelicula;
-              nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4';
+              nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
               nuevoImg.alt = DatosJson[j].Titulo;
-              nuevoImg.style = "height: 250px; width: auto;";
+              nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
               nuevoDiv.appendChild(nuevoImg);
             }
             carruselinferior1.appendChild(nuevoDiv);
         }
         // Carruseles inferior 1
-        }
 
-      document.addEventListener('DOMContentLoaded', function () {
-        var carruselItems = document.querySelectorAll('CarruselImagen');
-    
-        carruselItems.forEach(function (item) {
-          item.addEventListener('mouseenter', function () {
-            item.classList.add('hover');
-          });
-    
-          item.addEventListener('mouseleave', function () {
-            item.classList.remove('hover');
-          });
-        });
-      });
+        
+        $.ajax({
+            type: 'GET',
+            url: '<?= base_url('terror') ?>', // Ruta al controlador y método
+            dataType: 'json',
+              success: function(response) {
+                // Maneja la respuesta del servidor
+              console.log(response);
+              procesarDatos2(response);
+              },
+              error: function(error) {
+                // Maneja errores de la solicitud
+              console.log(error);
+              alert('Error al procesar el formulario');
+              }
+         });
+         function procesarDatos2(DatosJson){
+          // Carruseles inferior 1
+        var carruselinferior1 = document.getElementById('CarruselInferior2');
+        for (var i = 0; i < 3; i++) {
+            var nuevoDiv = document.createElement('div');
+            if(i == 0){
+              nuevoDiv.className = 'carousel-item active text-center m-0 p-0';
+            }
+            else{
+              nuevoDiv.className = 'carousel-item text-center';
+            }
+
+            for (var j = 0;j < 6; j++){
+              var nuevoImg = document.createElement('img');
+              nuevoImg.src = DatosJson[j].Poster_Pelicula;
+              nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
+              nuevoImg.alt = DatosJson[j].Titulo;
+              nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
+              nuevoDiv.appendChild(nuevoImg);
+            }
+            carruselinferior1.appendChild(nuevoDiv);
+        }
+        // Carruseles inferior 1
+         }
+        }
     </script>
 </head>
 <body class="bg-dark ">
@@ -170,7 +200,7 @@
     </div>
     <!-- sidebar -->
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark bg-gradient  w-100" >
+    <nav class="navbar navbar-expand-lg bg-dark bg-gradient w-100 sticky-top" >
         <div class="container-fluid">
           <a class="navbar-brand text-white" href="#">FIC+</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -215,17 +245,9 @@
     <h1 class="text-white mt-3 text-center">Recomendados</h1>
     <!-- carruseles inferiores -->
         <div id="carouselExample2" class="carousel slide mx-auto" >
-                <div class="carousel-inner mt-2 overflow-y-visible" id="CarruselInferior1"><!-- no mover el width del inner -->
-                    <div class="carousel-item active text-center" >
-                      <img src="IMG/8.jpg" class="CarruselImagen d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                    </div>
-                    <div class="carousel-item text-center">
-                      <img src="IMG/20.jpg" class="CarruselImagen d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                    </div>
-                    <div class="carousel-item text-center">
-                      <img src="IMG/18.jpg" class="CarruselImagen d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                    </div>
-            </div>
+                <div class="carousel-inner mt-3 mb-5 overflow-y-visible" id="CarruselInferior1"><!-- no mover el width del inner -->
+                    <!-- Aqui van los elementos generados -->
+                </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -236,19 +258,11 @@
             </button>
           </div>
     <!-- carruseles inferiores -->
-    <h1 class="text-white mt-3 text-center">Proximamente...</h1>
+    <h1 class="text-white mt-5 text-center">Terror</h1>
     <!-- carruseles inferiores 2 -->
         <div id="carouselExample3" class="carousel slide mx-auto" >
-                <div class="carousel-inner mt-2 overflow-y-visible"><!-- no mover el width del inner -->
-                    <div class="carousel-item active text-center" >
-                     <img src="https://fic-plus.000webhostapp.com/IMG/13.jpg" class="CarruselImagen d-inline shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                    </div>
-                    <div class="carousel-item text-center">
-                      <img src="IMG/20.jpg" class="CarruselImagen d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                    </div>
-                    <div class="carousel-item text-center">
-                      <img src="IMG/18.jpg" class="CarruselImagen d-inline mx-2 shadow rounded-4" alt="..." style="height: 250px; width: auto;">
-                    </div>
+                <div class="carousel-inner mt-2 overflow-y-visible" id="CarruselInferior2"><!-- no mover el width del inner -->
+                <!-- adentro -->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -258,7 +272,7 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
+          </div>  
     <!-- carruseles inferiores 2 -->
     <!-- footer -->
     <div class="container mt-5">
