@@ -1,5 +1,6 @@
 package com.CAIR.fic.datos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.annotation.Nullable;
 
 import com.CAIR.fic.R;
 
+import com.CAIR.fic.Ui.ReproductorActivity;
 import com.bumptech.glide.Glide;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
@@ -53,8 +55,11 @@ public class DetallesPeliculaActivity extends BottomSheetDialogFragment {
 
                 // Configurar el clic del botón reproducir si es necesario
                 BtnReproducir.setOnClickListener(v -> {
-                    // Agrega lógica para reproducir la película
+                    Intent intent = new Intent(requireContext(), ReproductorActivity.class);
+                    intent.putExtra("urlPelicula", pelicula.getEnlace_Video());
+                    startActivity(intent);
                 });
+
             }
         }
 

@@ -63,20 +63,37 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        if (!contra.equals(repContra)) {
-            Toast.makeText(this, "Las contraseñas no coinciden.", Toast.LENGTH_SHORT).show();
+        if (!nombre.matches("^[a-zA-Z ]+$")) {
+            Toast.makeText(this, "El nombre solo debe contener letras.", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        if (correo.length() < 15) {
-            Toast.makeText(this, "El correo debe tener al menos 15 caracteres.", Toast.LENGTH_SHORT).show();
+        if (!apellido.matches("^[a-zA-Z ]+$")) {
+            Toast.makeText(this, "El apellido solo debe contener letras.", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        if (!correo.contains("@")) {
+
+
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(correo).matches() || !correo.matches(".*@.*") || !correo.substring(correo.indexOf("@")).contains(".com")) {
+            Toast.makeText(this, "Ingrese una dirección de correo electrónico válida.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        /*if (!android.util.Patterns.EMAIL_ADDRESS.matcher(correo).matches()||!correo.contains(".com")) {
+            Toast.makeText(this, "Ingrese un correo electrónico válido.", Toast.LENGTH_SHORT).show();
+            return;
+        }*/
+
+        /*if (correo.length() < 15) {
+            Toast.makeText(this, "El correo debe tener al menos 13 caracteres.", Toast.LENGTH_SHORT).show();
+            return;
+        }*/
+
+       /* if (!correo.contains("@")) {
             Toast.makeText(this, "El correo debe contener el carácter '@'.", Toast.LENGTH_SHORT).show();
             return;
-        }
+        }*/
 
         if (contra.length() < 8) {
             Toast.makeText(this, "La contraseña debe tener al menos 8 caracteres.", Toast.LENGTH_SHORT).show();
@@ -92,6 +109,17 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(this, "La contraseña debe contener al menos un carácter especial.", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        if (!contra.matches(".*\\d.*")) {
+            Toast.makeText(this, "La contraseña debe contener al menos un número.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (!contra.equals(repContra)) {
+            Toast.makeText(this, "Las contraseñas no coinciden.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
 
         IUsuarios apiService = Conexion.getDatos().create(IUsuarios.class);
 
