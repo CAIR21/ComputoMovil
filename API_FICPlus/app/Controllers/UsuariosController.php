@@ -50,7 +50,13 @@ class UsuariosController extends ResourceController
      */
     public function show($id = null)
     {
-
+        $ModeloUsuario = new Usuarios();
+         $Usuarios = $ModeloUsuario->getWhere(['ID_Usuario' => $id])->getRow();
+         if($Usuarios){
+             return $this->respond($Usuarios);
+         }else{
+             return $this->failNotFound("Error, Usuario No Encontrado");
+         }
     }
 
     /**
