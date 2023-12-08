@@ -14,5 +14,9 @@ $routes->get('Registro', 'Home::Registrar');
 // $routes->resource('peliculas', ['controller' => 'PeliculasController']);
 $routes->get('peliculas', 'PeliculasController::showall');
 $routes->resource('usuarios', ['controller' => 'UsuariosController']);
+<<<<<<< HEAD
 $routes->resource('usuarios/(:num)', ['controller' => 'UsuariosController']);
+=======
+$routes->get('terror', 'PeliculasController::showall_terror');
+>>>>>>> 134457472a6cddfe2cea37ad20855d2d583a9587
 $routes->post('login', 'UsuariosController::login');
