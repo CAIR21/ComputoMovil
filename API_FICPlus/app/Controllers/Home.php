@@ -16,6 +16,9 @@ class Home extends BaseController
     public function Menu_Principal(){
         return view("Menu_PrincipalCanon.php");
     }
+    public function Menu_Pelicula(){
+        return view("Menu_Pelicula.php");
+    }
 
     public function Registrar(){
         return view("Register2.php");

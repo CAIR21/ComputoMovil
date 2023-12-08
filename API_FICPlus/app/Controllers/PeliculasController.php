@@ -13,7 +13,7 @@ class PeliculasController extends ResourceController
      *
      * @return mixed
      */
-    /**public function index()
+    public function index()
     {
         //
     }
@@ -58,13 +58,23 @@ class PeliculasController extends ResourceController
     // public function show($id = null)
     // {
     //     $ModeloPeliculas = new Peliculas();
-    //     $pelicula = $ModeloPeliculas->getWhere(['ID_Peliculas' => $id])->getResult();
+    //     $pelicula = $ModeloPeliculas->getWhere(['ID_Peliculas' => $id])->getRow();
     //     if($pelicula){
     //         return $this->respond($pelicula);
     //     }else{
     //         return $this->failNotFound("Error, Pelicula No Encontrada");
     //     }
     // }
+    public function show($id = null)
+    {
+        $ModeloPeliculas = new Peliculas();
+        $data['pelicula'] = $ModeloPeliculas->find($id);
+        if($data['pelicula']){
+            return view("Menu_Pelicula", $data);
+        }else{
+            return $this->failNotFound("Error, Pelicula No Encontrada");
+        }
+    }
 
     /**
      * Return a new resource object, with default properties

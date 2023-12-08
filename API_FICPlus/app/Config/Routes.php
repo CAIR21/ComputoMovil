@@ -9,14 +9,18 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('inicio', 'Home::inicio');
 $routes->get('Principal', 'Home::Menu_Principal');
+$routes->get('Pelicula', 'Home::Menu_Pelicula');
 $routes->get('Registro', 'Home::Registrar');
+$routes->get('peliculas/(:num)', 'PeliculasController::show/$1');
 //Controladores
 // $routes->resource('peliculas', ['controller' => 'PeliculasController']);
+//CRUD peliculas
 $routes->get('peliculas', 'PeliculasController::showall');
+//Mostrar determinada pelicula por id
+
+//CRUD usuarios
 $routes->resource('usuarios', ['controller' => 'UsuariosController']);
-<<<<<<< HEAD
+
 $routes->resource('usuarios/(:num)', ['controller' => 'UsuariosController']);
-=======
 $routes->get('terror', 'PeliculasController::showall_terror');
->>>>>>> 134457472a6cddfe2cea37ad20855d2d583a9587
 $routes->post('login', 'UsuariosController::login');
