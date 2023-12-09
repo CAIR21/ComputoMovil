@@ -79,6 +79,17 @@ class PeliculasController extends ResourceController
             return $this->failNotFound("Error, Pelicula No Encontrada");
         }
     }
+    public function search($Suchen)
+    {
+        $ModeloPeliculas = new Peliculas();
+        $peliculas = $ModeloPeliculas->like('Titulo', $Suchen)->get()->getResult();
+        if($peliculas){
+            return $this->response->setJSON($peliculas);
+        }else{
+            return $this->failNotFound("Error, No se Encontró");
+        }
+    }
+
 
     /**
      * Return a new resource object, with default properties

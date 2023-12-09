@@ -1,0 +1,126 @@
+CRITICAL - 2023-12-09 20:16:17 --> Call to undefined method App\Models\Peliculas::getResult
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PeliculasController.php(88): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('thor')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 20:19:12 --> Call to undefined method App\Models\Peliculas::getResult
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PeliculasController.php(88): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('thor')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 20:20:22 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Views\Menu_Busqueda.php on line 226.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Menu_Busqueda', [], true)
+ 4 APPPATH\Controllers\PeliculasController.php(90): view('Menu_Busqueda', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('thor')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 20:35:12 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in APPPATH\Views\Menu_Busqueda.php on line 24.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Menu_Busqueda', [], true)
+ 4 APPPATH\Controllers\PeliculasController.php(91): view('Menu_Busqueda', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('sexo')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 21:01:11 --> Undefined variable $data
+in APPPATH\Controllers\PeliculasController.php on line 90.
+ 1 APPPATH\Controllers\PeliculasController.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\PeliculasController.php', 90)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('hola')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 21:04:30 --> view(): Argument #1 ($name) must be of type string, CodeIgniter\Database\MySQLi\Result given, called in C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\app\Controllers\PeliculasController.php on line 90
+in SYSTEMPATH\Common.php on line 1178.
+ 1 APPPATH\Controllers\PeliculasController.php(90): view(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('hola')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 21:04:31 --> view(): Argument #1 ($name) must be of type string, CodeIgniter\Database\MySQLi\Result given, called in C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\app\Controllers\PeliculasController.php on line 90
+in SYSTEMPATH\Common.php on line 1178.
+ 1 APPPATH\Controllers\PeliculasController.php(90): view(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('hola')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 21:06:16 --> view(): Argument #1 ($name) must be of type string, CodeIgniter\Database\MySQLi\Result given, called in C:\Users\ploco\Desktop\FicPlusGit\ComputoMovil\API_FICPlus\app\Controllers\PeliculasController.php on line 90
+in SYSTEMPATH\Common.php on line 1178.
+ 1 APPPATH\Controllers\PeliculasController.php(90): view(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('hola')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 21:09:18 --> Call to undefined method App\Models\Peliculas::getResult
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PeliculasController.php(88): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('thor')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 21:09:59 --> Call to undefined method App\Models\Peliculas::getResult
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PeliculasController.php(88): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('thor')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 21:09:59 --> Call to undefined method App\Models\Peliculas::getResult
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PeliculasController.php(88): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('thor')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 21:13:23 --> Call to undefined method App\Models\Peliculas::getRow
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PeliculasController.php(88): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('thor')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 21:17:13 --> Call to undefined method App\Models\Peliculas::getResult
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PeliculasController.php(85): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('thor')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 21:19:36 --> Call to undefined method App\Models\Peliculas::getResult
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PeliculasController.php(85): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('thor')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')
+CRITICAL - 2023-12-09 21:19:46 --> Undefined variable $pelicula
+in APPPATH\Controllers\PeliculasController.php on line 86.
+ 1 APPPATH\Controllers\PeliculasController.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelicula', 'C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\app\\Controllers\\PeliculasController.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PeliculasController->search('thor')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PeliculasController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ploco\\Desktop\\FicPlusGit\\ComputoMovil\\API_FICPlus\\public\\index.php')

@@ -23,4 +23,8 @@ class Home extends BaseController
     public function Registrar(){
         return view("Register2.php");
     }
+    public function busqueda($Suchen = null){
+        $data['Suchen'] = $Suchen;
+        return view("Menu_Busqueda.php", $data);
+    }
 }

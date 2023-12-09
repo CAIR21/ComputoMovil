@@ -21,6 +21,17 @@
   }
     </style>
     <script>
+
+      function redirigir() {
+            var valorCajaTexto = document.getElementById('Busqueda').value;
+            if (valorCajaTexto.trim() !== '') {
+                // Construir la nueva URL y redirigir
+                var nuevaUrl = '<?= base_url('busqueda') ?>/' + valorCajaTexto;
+                window.location.href = nuevaUrl;
+            } else {
+                alert('Por favor, introduce un valor antes de redirigir.');
+            }
+        }
       $.ajax({
             type: 'GET',
             url: '<?= base_url('peliculas') ?>', // Ruta al controlador y método
@@ -70,26 +81,25 @@
         // Carruseles inferior 1
       
         var carruselinferior1 = document.getElementById('CarruselInferior1');
-        for (var i = 0; i < 3; i++) {
-            var nuevoDiv = document.createElement('div');
-            if(i == 0){
+        for (var i = 0; i < 8; i++) {
+            if (i%4 == 0){
+              var nuevoDiv = document.createElement('div');
+              if(i == 0){
               nuevoDiv.className = 'carousel-item active text-center m-0 p-0';
             }
             else{
               nuevoDiv.className = 'carousel-item text-center';
             }
-
-            for (var j = 0;j < 6; j++){
+            }
               var nuevoImg = document.createElement('img');
               var nuevoA = document.createElement('a');
-              nuevoImg.src = DatosJson[j].Poster_Pelicula;
+              nuevoImg.src = DatosJson[i].Poster_Pelicula;
               nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
-              nuevoImg.alt = DatosJson[j].Titulo;
+              nuevoImg.alt = DatosJson[i].Titulo;
               nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
-              nuevoA.href = '<?= base_url('peliculas') ?>/' + DatosJson[j].ID_Peliculas;
+              nuevoA.href = '<?= base_url('peliculas') ?>/' + DatosJson[i].ID_Peliculas;
               nuevoA.appendChild(nuevoImg);
               nuevoDiv.appendChild(nuevoA);
-            }
             carruselinferior1.appendChild(nuevoDiv);
         }
         // Carruseles inferior 1
@@ -113,30 +123,29 @@
          function procesarDatos2(DatosJson){
           // Carruseles inferior 1
         var carruselinferior1 = document.getElementById('CarruselInferior2');
-        for (var i = 0; i < 3; i++) {
-            var nuevoDiv = document.createElement('div');
-            if(i == 0){
+        for (var i = 0; i < 8; i++) {
+            if (i%4 == 0){
+              var nuevoDiv = document.createElement('div');
+              if(i == 0){
               nuevoDiv.className = 'carousel-item active text-center m-0 p-0';
             }
             else{
               nuevoDiv.className = 'carousel-item text-center';
             }
-
-            for (var j = 0;j < 6; j++){
+            }
               var nuevoImg = document.createElement('img');
               var nuevoA = document.createElement('a');
-              nuevoImg.src = DatosJson[j].Poster_Pelicula;
+              nuevoImg.src = DatosJson[i].Poster_Pelicula;
               nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
-              nuevoImg.alt = DatosJson[j].Titulo;
+              nuevoImg.alt = DatosJson[i].Titulo;
               nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
-              nuevoA.href = '<?= base_url('peliculas') ?>/' + DatosJson[j].ID_Peliculas;
+              nuevoA.href = '<?= base_url('peliculas') ?>/' + DatosJson[i].ID_Peliculas;
               nuevoA.appendChild(nuevoImg);
               nuevoDiv.appendChild(nuevoA);
-            }
             carruselinferior1.appendChild(nuevoDiv);
         }
         // Carruseles inferior 1
-         }
+        }
         }
     </script>
 </head>
@@ -227,10 +236,10 @@
                 <a class="nav-link text-white px-4" href="#"><strong>Categorias</strong></a>
               </li>
             </ul>
-            <form class="d-flex align-items-center " style="Color: White" role="search" action="../Paginas/Busqueda.php" method="post">
-              <button class="btn btn-outline-light me-2" type="submit"><i class="fa fa-search" style="font-size:20px"></i></button>
-              <input class="form-control" type="search" name="Suchen" placeholder="Search" aria-label="Search">
-          </form>
+            <div class="d-flex align-items-center " style="Color: White">
+              <button class="btn btn-outline-light me-2" onclick="redirigir();"type="submit"><i class="fa fa-search" style="font-size:20px"></i></button>
+              <input class="form-control" type="search" name="Suchen" placeholder="Search" aria-label="Search" id="Busqueda">
+            </div>
           </div>
         </div>
       </nav>

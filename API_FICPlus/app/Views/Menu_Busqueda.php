@@ -11,119 +11,59 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <style>
-  .CarruselImagen{
+  .resultado{
     transition: transform 0.3s ease, border 0.3s ease; /* Transiciones suaves */
   }
-  .CarruselImagen:hover{
+  .resultado:hover{
     transform: scale(0.9); /* Hacer que la imagen sea un 10% más grande */
     border: 2px solid white; /* Agregar un borde blanco de 2px */
     transition: transform 0.3s ease, border 0.3s ease; /* Agregar transiciones suaves */
   }
     </style>
     <script>
-       
+      function redirigir() {
+            var valorCajaTexto = document.getElementById('Busqueda').value;
+            if (valorCajaTexto.trim() !== '') {
+                // Construir la nueva URL y redirigir
+                var nuevaUrl = '<?= base_url('busqueda') ?>/' + valorCajaTexto;
+                window.location.href = nuevaUrl;
+            } else {
+                alert('Por favor, introduce un valor antes de redirigir.');
+            }
+        }
       $.ajax({
             type: 'GET',
-            url: '<?= base_url('usuarios') ?>/' + 1, // Ruta al controlador y método
+            url: '<?= base_url('busquedaPeliculas') ?>/' + '<?= $Suchen ?>', // Ruta al controlador y método
             dataType: 'json',
               success: function(response) {
                 // Maneja la respuesta del servidor
               console.log(response);
+              var h = document.getElementById('Such');
+              h.textContent =  '<?= $Suchen ?>';
               procesarDatos(response);
               },
               error: function(error) {
                 // Maneja errores de la solicitud
               console.log(error);
-              alert('Error al procesar el formulario');
+              var h = document.getElementById('Such');
+              h.textContent = 'No hubo coincidencias';
               }
          });
 
-         $.ajax({
-            type: 'GET',
-            url: '<?= base_url('peliculas') ?>', // Ruta al controlador y método
-            dataType: 'json',
-              success: function(response) {
-                // Maneja la respuesta del servidor
-              console.log(response);
-              procesarDatos(response);
-              },
-              error: function(error) {
-                // Maneja errores de la solicitud
-              console.log(error);
-              alert('Error al procesar el formulario');
-              }
-         });
+         function procesarDatos(Datos){
+          miDiv = document.getElementById('Elementos');
+
+          for(var i = 0;i < Datos.length; i++){
+            var nuevoImg = document.createElement('img');
+            nuevoImg.className = "resultado p-1 rounded-4";
+            nuevoImg.src = Datos[i].Poster_Pelicula;
+            nuevoImg.alt = Datos[i].Titulo;
+            nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
+            miDiv.appendChild(nuevoImg);
+          }
           
-
-         
-
-        function procesarDatos(DatosJson){
-        var cantidadElementos = DatosJson.length; // Puedes obtener esto desde la respuesta de la base de datos
-        // Carruseles inferior 1
-      
-        var carruselinferior1 = document.getElementById('CarruselInferior1');
-        for (var i = 0; i < 3; i++) {
-            var nuevoDiv = document.createElement('div');
-            if(i == 0){
-              nuevoDiv.className = 'carousel-item active text-center m-0 p-0';
-            }
-            else{
-              nuevoDiv.className = 'carousel-item text-center';
-            }
-
-            for (var j = 0;j < 6; j++){
-              var nuevoImg = document.createElement('img');
-              nuevoImg.src = DatosJson[j].Poster_Pelicula;
-              nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
-              nuevoImg.alt = DatosJson[j].Titulo;
-              nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
-              nuevoDiv.appendChild(nuevoImg);
-            }
-            carruselinferior1.appendChild(nuevoDiv);
-        }
-        // Carruseles inferior 1
-
-        
-        $.ajax({
-            type: 'GET',
-            url: '<?= base_url('terror') ?>', // Ruta al controlador y método
-            dataType: 'json',
-              success: function(response) {
-                // Maneja la respuesta del servidor
-              console.log(response);
-              procesarDatos2(response);
-              },
-              error: function(error) {
-                // Maneja errores de la solicitud
-              console.log(error);
-              alert('Error al procesar el formulario');
-              }
-         });
-         function procesarDatos2(DatosJson){
-          // Carruseles inferior 2
-        var carruselinferior1 = document.getElementById('CarruselInferior2');
-        for (var i = 0; i < 3; i++) {
-            var nuevoDiv = document.createElement('div');
-            if(i == 0){
-              nuevoDiv.className = 'carousel-item active text-center m-0 p-0';
-            }
-            else{
-              nuevoDiv.className = 'carousel-item text-center';
-            }
-
-            for (var j = 0;j < 6; j++){
-              var nuevoImg = document.createElement('img');
-              nuevoImg.src = DatosJson[j].Poster_Pelicula;
-              nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
-              nuevoImg.alt = DatosJson[j].Titulo;
-              nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
-              nuevoDiv.appendChild(nuevoImg);
-            }
-            carruselinferior1.appendChild(nuevoDiv);
-        }
-        // Carruseles inferior 2
          }
-        }
+      
     </script>
 </head>
 <body class="bg-dark ">
@@ -213,56 +153,24 @@
                 <a class="nav-link text-white px-4" href="#"><strong>Categorias</strong></a>
               </li>
             </ul>
-            <form class="d-flex align-items-center " style="Color: White" role="search" action="../Paginas/Busqueda.php" method="post">
-              <button class="btn btn-outline-light me-2" type="submit"><i class="fa fa-search" style="font-size:20px"></i></button>
-              <input class="form-control" type="search" name="Suchen" placeholder="Search" aria-label="Search">
-          </form>
+            <div class="d-flex align-items-center " style="Color: White">
+              <button class="btn btn-outline-light me-2" onclick="redirigir();"type="submit"><i class="fa fa-search" style="font-size:20px"></i></button>
+              <input class="form-control" type="search" name="Suchen" placeholder="Search" aria-label="Search" id="Busqueda">
+            </div>
           </div>
         </div>
       </nav>
     <!-- navbar -->
-    <!-- Información de la pelicula -->
-    <div class="card text-bg-dark">
-  <img src="<?= $pelicula['Banner_Pelicula'] ?>" class="card-img" alt="<?= $pelicula['Titulo'] ?>" id="pelicula">
-  <div class="card-img-overlay">
-    <h5 class="card-title"><?= $pelicula['Titulo'] ?></h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small>Last updated 3 mins ago</small></p>
-  </div>
-</div>
-    <!-- Información de la pelicula -->
-    <h1 class="text-white mt-3 text-center">Recomendados</h1>
-    <!-- carruseles inferiores -->
-        <div id="carouselExample2" class="carousel slide mx-auto" >
-                <div class="carousel-inner mt-3 mb-5 overflow-y-visible" id="CarruselInferior1"><!-- no mover el width del inner -->
-                    <!-- Aqui van los elementos generados -->
-                </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-    <!-- carruseles inferiores -->
-    <h1 class="text-white mt-5 text-center">Terror</h1>
-    <!-- carruseles inferiores 2 -->
-        <div id="carouselExample3" class="carousel slide mx-auto" >
-                <div class="carousel-inner mt-2 overflow-y-visible" id="CarruselInferior2"><!-- no mover el width del inner -->
-                <!-- adentro -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>  
-    <!-- carruseles inferiores 2 -->
+    <!-- Peliculas -->
+    <h1 class="text-bg-dark text-center" id="Such"><?= $Suchen ?></h1>
+    <div class="container ">
+        <div class="d-flex flex-wrap mx-auto" id="Elementos">
+
+        </div>
+    </div>
+    
+    <!-- Peliculas -->
+   
     <!-- footer -->
     <div class="container mt-5">
       <div class="row border-top">
