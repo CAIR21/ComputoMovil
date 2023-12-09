@@ -40,7 +40,7 @@
 
          $.ajax({
             type: 'GET',
-            url: '<?= base_url('peliculas') ?>', // Ruta al controlador y método
+            url: '<?= base_url('Categoria') ?>/' + '<?= $pelicula['ID_Categoria'] ?>', // Ruta al controlador y método
             dataType: 'json',
               success: function(response) {
                 // Maneja la respuesta del servidor
@@ -73,20 +73,22 @@
 
             for (var j = 0;j < 6; j++){
               var nuevoImg = document.createElement('img');
+              var nuevoA = document.createElement('a');
               nuevoImg.src = DatosJson[j].Poster_Pelicula;
               nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
               nuevoImg.alt = DatosJson[j].Titulo;
               nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
-              nuevoDiv.appendChild(nuevoImg);
+              nuevoA.href = '<?= base_url('peliculas') ?>/' + DatosJson[j].ID_Peliculas;
+              nuevoA.appendChild(nuevoImg);
+              nuevoDiv.appendChild(nuevoA);
             }
             carruselinferior1.appendChild(nuevoDiv);
         }
         // Carruseles inferior 1
 
-        
         $.ajax({
             type: 'GET',
-            url: '<?= base_url('terror') ?>', // Ruta al controlador y método
+            url: '<?= base_url('peliculas') ?>', // Ruta al controlador y método
             dataType: 'json',
               success: function(response) {
                 // Maneja la respuesta del servidor
@@ -113,11 +115,14 @@
 
             for (var j = 0;j < 6; j++){
               var nuevoImg = document.createElement('img');
+              var nuevoA = document.createElement('a');
               nuevoImg.src = DatosJson[j].Poster_Pelicula;
               nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
               nuevoImg.alt = DatosJson[j].Titulo;
               nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
-              nuevoDiv.appendChild(nuevoImg);
+              nuevoA.href = '<?= base_url('peliculas') ?>/' + DatosJson[j].ID_Peliculas;
+              nuevoA.appendChild(nuevoImg);
+              nuevoDiv.appendChild(nuevoA);
             }
             carruselinferior1.appendChild(nuevoDiv);
         }
@@ -222,16 +227,17 @@
       </nav>
     <!-- navbar -->
     <!-- Información de la pelicula -->
+    <div class="container">
     <div class="card text-bg-dark">
-  <img src="<?= $pelicula['Banner_Pelicula'] ?>" class="card-img" alt="<?= $pelicula['Titulo'] ?>" id="pelicula">
-  <div class="card-img-overlay">
-    <h5 class="card-title"><?= $pelicula['Titulo'] ?></h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small>Last updated 3 mins ago</small></p>
-  </div>
-</div>
+        <img src="<?= $pelicula['Banner_Pelicula'] ?>" class="card-img" alt="<?= $pelicula['Titulo'] ?>" id="pelicula">
+        <div class="card-img-overlay d-flex align-items-start flex-column">
+          <h5 class="card-title mt-auto"><?= $pelicula['Titulo'] ?></h5>
+           <p class="card-text"><?= $pelicula['Descripcion'] ?></p>
+          </div>
+        </div>
+    </div>
     <!-- Información de la pelicula -->
-    <h1 class="text-white mt-3 text-center">Recomendados</h1>
+    <h1 class="text-white mt-3 text-center">Relacionado</h1>
     <!-- carruseles inferiores -->
         <div id="carouselExample2" class="carousel slide mx-auto" >
                 <div class="carousel-inner mt-3 mb-5 overflow-y-visible" id="CarruselInferior1"><!-- no mover el width del inner -->

@@ -33,10 +33,11 @@ class PeliculasController extends ResourceController
         }
         return $this->response->setJSON($peliculas);
     }
-
-    public function showall_terror(){
+    public function showall_categoria($cat = null){
         $ModeloPeliculas = new Peliculas();
-        $peliculas = $ModeloPeliculas->getWhere(['ID_Categoria' => 2])->getResult();
+        $ModeloCategorias = new Categorias();
+        $categoria = $ModeloCategorias->getWhere(['Categoria' => $cat])->getRow();
+        $peliculas = $ModeloPeliculas->getWhere(['ID_Categoria' => $categoria->ID_Categorias])->getResult();
         return $this->response->setJSON($peliculas);
     }
     // public function showall()
@@ -68,7 +69,10 @@ class PeliculasController extends ResourceController
     public function show($id = null)
     {
         $ModeloPeliculas = new Peliculas();
+        $ModeloCategorias = new Categorias();
         $data['pelicula'] = $ModeloPeliculas->find($id);
+        $Categoria = $ModeloCategorias->getWhere(['ID_Categorias' => $data['pelicula']['ID_Categoria']])->getRow();
+        $data['pelicula']['ID_Categoria'] = $Categoria->Categoria; 
         if($data['pelicula']){
             return view("Menu_Pelicula", $data);
         }else{

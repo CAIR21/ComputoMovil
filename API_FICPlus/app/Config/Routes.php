@@ -22,5 +22,6 @@ $routes->get('peliculas', 'PeliculasController::showall');
 $routes->resource('usuarios', ['controller' => 'UsuariosController']);
 
 $routes->resource('usuarios/(:num)', ['controller' => 'UsuariosController']);
-$routes->get('terror', 'PeliculasController::showall_terror');
+$routes->get('Categoria/(:any)', 'PeliculasController::showall_categoria/$1');
+
 $routes->post('login', 'UsuariosController::login');

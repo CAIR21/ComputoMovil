@@ -48,6 +48,7 @@
         // Crea divs dinámicamente y añádelos al contenedor
         for (var i = 0; i < 3; i++) {
             var nuevoDiv = document.createElement('div');
+            var nuevoA = document.createElement('a');
             if(i == 0){
               nuevoDiv.className = 'carousel-item active';
             }
@@ -60,7 +61,9 @@
             nuevoImg.className = 'CarruselImagen d-block shadow-lg mx-auto w-75 rounded-4';
             nuevoImg.style = "cursor:pointer;";
             nuevoImg.alt = DatosJson[i].Titulo;
-            nuevoDiv.appendChild(nuevoImg);
+            nuevoA.href = '<?= base_url('peliculas') ?>/' + DatosJson[i].ID_Peliculas;
+            nuevoA.appendChild(nuevoImg);
+            nuevoDiv.appendChild(nuevoA);
             contenedor.appendChild(nuevoDiv);
         }
         // Carruseles superiores
@@ -78,11 +81,14 @@
 
             for (var j = 0;j < 6; j++){
               var nuevoImg = document.createElement('img');
+              var nuevoA = document.createElement('a');
               nuevoImg.src = DatosJson[j].Poster_Pelicula;
               nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
               nuevoImg.alt = DatosJson[j].Titulo;
               nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
-              nuevoDiv.appendChild(nuevoImg);
+              nuevoA.href = '<?= base_url('peliculas') ?>/' + DatosJson[j].ID_Peliculas;
+              nuevoA.appendChild(nuevoImg);
+              nuevoDiv.appendChild(nuevoA);
             }
             carruselinferior1.appendChild(nuevoDiv);
         }
@@ -91,7 +97,7 @@
         
         $.ajax({
             type: 'GET',
-            url: '<?= base_url('terror') ?>', // Ruta al controlador y método
+            url: '<?= base_url('Categoria') ?>/Terror', // Ruta al controlador y método
             dataType: 'json',
               success: function(response) {
                 // Maneja la respuesta del servidor
@@ -118,11 +124,14 @@
 
             for (var j = 0;j < 6; j++){
               var nuevoImg = document.createElement('img');
+              var nuevoA = document.createElement('a');
               nuevoImg.src = DatosJson[j].Poster_Pelicula;
               nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
               nuevoImg.alt = DatosJson[j].Titulo;
               nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
-              nuevoDiv.appendChild(nuevoImg);
+              nuevoA.href = '<?= base_url('peliculas') ?>/' + DatosJson[j].ID_Peliculas;
+              nuevoA.appendChild(nuevoImg);
+              nuevoDiv.appendChild(nuevoA);
             }
             carruselinferior1.appendChild(nuevoDiv);
         }
