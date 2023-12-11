@@ -97,7 +97,7 @@
                 if (response.estatus === 'success') {
                     console.log(response.estatus);
                     alert("sijalo");
-                    window.location.href = '<?= base_url('peliculas') ?>';
+                    window.location.href = '<?= base_url('Principal') ?>';
                     // Redirigir o realizar acciones después del inicio de sesión exitoso
                 } else {
                   console.log(response.estatus);

@@ -66,7 +66,7 @@
       
     </script>
 </head>
-<body class="bg-dark ">
+<body class="bg-dark m-0 p-0">
     <!-- sidebar -->
     <div class="offcanvas offcanvas-start bg-black bg-gradient text-bg-white rounded-end-4 shadow-lg" style="width:18vw" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
         <div class="offcanvas-header">
@@ -163,20 +163,20 @@
     <!-- navbar -->
     <!-- Peliculas -->
     <h1 class="text-bg-dark text-center" id="Such"><?= $Suchen ?></h1>
-    <div class="container ">
-        <div class="d-flex flex-wrap mx-auto" id="Elementos">
+    <section class="container-fluid text-center m-0 p-0" style="background:red;">
+        <div class="d-flex flex-wrap" id="Elementos">
 
         </div>
-    </div>
+    </section>
     
     <!-- Peliculas -->
    
     <!-- footer -->
     <div class="container mt-5">
       <div class="row border-top">
-        <div class="col mb-5 text-bg-white">hola</div>
-        <div class="col mb-5">hola</div>
-        <div class="col mb-5">hola</div>
+        <div class="col mb-5 text-bg-black">FicPlus™</div>
+        <div class="col mb-5">Acerda de.</div>
+        <div class="col mb-5">Propiedad de "Los Aldapas"</div>
       </div>
     </div>
     <!-- footer -->
