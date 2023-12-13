@@ -11,8 +11,10 @@ $routes->get('inicio', 'Home::inicio');
 $routes->get('Principal', 'Home::Menu_Principal');
 $routes->get('Pelicula', 'Home::Menu_Pelicula');
 $routes->get('Registro', 'Home::Registrar');
+$routes->get('Categorias', 'Home::Menu_Categorias');
 $routes->get('peliculas/(:num)', 'PeliculasController::show/$1');
 $routes->get('busqueda/(:any)', 'Home::busqueda/$1');
+$routes->get('BusquedaCat/(:any)', 'Home::busquedaCat/$1');
 
 //Controladores
 // $routes->resource('peliculas', ['controller' => 'PeliculasController']);

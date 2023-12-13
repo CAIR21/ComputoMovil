@@ -44,7 +44,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title text-center">FIC+ | Iniciar Sesión</h5>
-          <form id="formulario">
+          <form id="formulario" method="post">
             <div class="form-group">
               <label for="username">Correo Electronico</label>
               <input type="text" class="form-control" id="email" name="email" placeholder="Ingresa tu usuario">
@@ -94,23 +94,24 @@
             data: { email: correo, password: password },
             dataType: 'json',
             success: function(response) {
-                if (response.estatus === 'success') {
+                if (response.estatus === 200) {
                     console.log(response.estatus);
-                    alert("sijalo");
+                    alert("Sesion iniciada correctamente");
                     window.location.href = '<?= base_url('Principal') ?>';
                     // Redirigir o realizar acciones después del inicio de sesión exitoso
                 } else {
-                  console.log(response.estatus);
-                    alert("nojalo");
+                    console.log(response.estatus);
+                    alert(JSON.stringify(response.mensaje.error));
+                    window.location.href = '<?= base_url('inicio') ?>';
                     // Manejar el caso de credenciales inválidas
                 }
             },
             error: function() {
                 alert('Error al procesar la solicitud.');
+                window.location.href = '<?= base_url('inicio') ?>';
             }
         });
   }
 </script>
-
 </body>
 </html>

@@ -11,18 +11,28 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <style>
-  .CarruselImagen{
+  .resultado{
     transition: transform 0.3s ease, border 0.3s ease; /* Transiciones suaves */
   }
-  .CarruselImagen:hover{
+  .resultado:hover{
     transform: scale(0.9); /* Hacer que la imagen sea un 10% más grande */
     border: 2px solid white; /* Agregar un borde blanco de 2px */
     transition: transform 0.3s ease, border 0.3s ease; /* Agregar transiciones suaves */
   }
     </style>
     <script>
-       
-       $.ajax({
+      function redirigir() {
+            var valorCajaTexto = document.getElementById('Busqueda').value;
+            if (valorCajaTexto.trim() !== '') {
+                // Construir la nueva URL y redirigir
+                var nuevaUrl = '<?= base_url('busqueda') ?>/' + valorCajaTexto;
+                window.location.href = nuevaUrl;
+            } else {
+                alert('Por favor, introduce un valor antes de redirigir.');
+            }
+        }
+
+        $.ajax({
             type: 'GET',
             url: '<?= base_url('usuarios') ?>/' + 1, // Ruta al controlador y método
             dataType: 'json',
@@ -39,115 +49,44 @@
               alert('Error al procesar el formulario');
               }
          });
-       function redirigir() {
-            var valorCajaTexto = document.getElementById('Busqueda').value;
-            if (valorCajaTexto.trim() !== '') {
-                // Construir la nueva URL y redirigir
-                var nuevaUrl = '<?= base_url('busqueda') ?>/' + valorCajaTexto;
-                window.location.href = nuevaUrl;
-            } else {
-                alert('Por favor, introduce un valor antes de redirigir.');
-            }
-        }
-        function vermoovie(pelicula) {
-                var nuevaUrl = pelicula;
-                window.location.href = nuevaUrl;
-        }
-
-         $.ajax({
+      $.ajax({
             type: 'GET',
-            url: '<?= base_url('Categoria') ?>/' + '<?= $pelicula['ID_Categoria'] ?>', // Ruta al controlador y método
+            url: '<?= base_url('Categoria') ?>/' + '<?= $Suchen ?>', // Ruta al controlador y método
             dataType: 'json',
               success: function(response) {
                 // Maneja la respuesta del servidor
               console.log(response);
+              var h = document.getElementById('Such');
+              h.textContent =  '<?= $Suchen ?>';
               procesarDatos(response);
               },
               error: function(error) {
                 // Maneja errores de la solicitud
               console.log(error);
-              alert('Error al procesar el formulario');
+              var h = document.getElementById('Such');
+              h.textContent = 'No hubo coincidencias';
               }
          });
+
+         function procesarDatos(Datos){
+          miDiv = document.getElementById('Elementos');
+
+          for(var i = 0;i < Datos.length; i++){
+            var nuevoImg = document.createElement('img');
+            nuevoImg.className = "resultado p-1 rounded-4";
+            nuevoImg.src = Datos[i].Poster_Pelicula;
+            nuevoImg.alt = Datos[i].Titulo;
+            nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
+            miDiv.appendChild(nuevoImg);
+          }
           
-
-         
-
-        function procesarDatos(DatosJson){
-        var cantidadElementos = DatosJson.length; // Puedes obtener esto desde la respuesta de la base de datos
-        // Carruseles inferior 1
-      
-        var carruselinferior1 = document.getElementById('CarruselInferior1');
-        for (var i = 0; i < 8; i++) {
-            if (i%4 == 0){
-              var nuevoDiv = document.createElement('div');
-              if(i == 0){
-              nuevoDiv.className = 'carousel-item active text-center';
-            }
-            else{
-              nuevoDiv.className = 'carousel-item text-center';
-            }
-            }
-              var nuevoImg = document.createElement('img');
-              var nuevoA = document.createElement('a');
-              nuevoImg.src = DatosJson[i].Poster_Pelicula;
-              nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
-              nuevoImg.alt = DatosJson[i].Titulo;
-              nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
-              nuevoA.href = '<?= base_url('peliculas') ?>/' + DatosJson[i].ID_Peliculas;
-              nuevoA.appendChild(nuevoImg);
-              nuevoDiv.appendChild(nuevoA);
-            carruselinferior1.appendChild(nuevoDiv);
-        }
-        // Carruseles inferior 1
-
-        $.ajax({
-            type: 'GET',
-            url: '<?= base_url('peliculas') ?>', // Ruta al controlador y método
-            dataType: 'json',
-              success: function(response) {
-                // Maneja la respuesta del servidor
-              console.log(response);
-              procesarDatos2(response);
-              },
-              error: function(error) {
-                // Maneja errores de la solicitud
-              console.log(error);
-              alert('Error al procesar el formulario');
-              }
-         });
-         function procesarDatos2(DatosJson){
-          // Carruseles inferior 2
-        var carruselinferior1 = document.getElementById('CarruselInferior2');
-        for (var i = 0; i < 8; i++) {
-            if (i%4 == 0){
-              var nuevoDiv = document.createElement('div');
-              if(i == 0){
-              nuevoDiv.className = 'carousel-item active text-center';
-            }
-            else{
-              nuevoDiv.className = 'carousel-item text-center';
-            }
-            }
-              var nuevoImg = document.createElement('img');
-              var nuevoA = document.createElement('a');
-              nuevoImg.src = DatosJson[i].Poster_Pelicula;
-              nuevoImg.className = 'CarruselImagen d-inline shadow rounded-4 mx-2';
-              nuevoImg.alt = DatosJson[i].Titulo;
-              nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
-              nuevoA.href = '<?= base_url('peliculas') ?>/' + DatosJson[i].ID_Peliculas;
-              nuevoA.appendChild(nuevoImg);
-              nuevoDiv.appendChild(nuevoA);
-            carruselinferior1.appendChild(nuevoDiv);
-        }
-        // Carruseles inferior 2
          }
-        }
+      
     </script>
 </head>
-<body class="bg-dark ">
-     <!-- sidebar -->
-     <div class="offcanvas offcanvas-start bg-black bg-gradient text-bg-white rounded-end-4 shadow-lg" style="width:18vw" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+<body class="bg-dark m-0 p-0">
+    <!-- sidebar -->
+    <div class="offcanvas offcanvas-start bg-black bg-gradient text-bg-white rounded-end-4 shadow-lg" style="width:18vw" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
         <div class="offcanvas-header">
             <!-- <img src="..." width="60" height="50" alt="Imagen Logo" class="logo_central offcanvas-title"> -->
             <button type="button" class="btn-close text-reset btn-close-white px-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -234,56 +173,22 @@
         </div>
       </nav>
     <!-- navbar -->
-    <!-- Información de la pelicula -->
-    <div class="container">
-    <div class="card text-bg-dark">
-        <img src="<?= $pelicula['Banner_Pelicula'] ?>" class="card-img" alt="<?= $pelicula['Titulo'] ?>" id="pelicula">
-        <div class="card-img-overlay d-flex align-items-start flex-column">
-          <h5 class="card-title mt-auto"><?= $pelicula['Titulo'] ?></h5>
-           <p class="card-text"><?= $pelicula['Descripcion'] ?></p>
-           <button onclick="vermoovie('<?= $pelicula['Enlace_Video'] ?>')" type="button" class="btn btn-primary me-5 mb-2 ">Ver pelicula</button>
-          </div>
+    <!-- Peliculas -->
+    <h1 class="text-bg-dark text-center" id="Such"><?= $Suchen ?></h1>
+    <section class="container-fluid text-center m-0 p-0">
+        <div class="d-flex flex-wrap text-center" id="Elementos">
+
         </div>
-    </div>
-    <!-- Información de la pelicula -->
-    <h1 class="text-white mt-3 text-center">Relacionado</h1>
-    <!-- carruseles inferiores -->
-        <div id="carouselExample2" class="carousel slide mx-auto" >
-                <div class="carousel-inner mt-3 mb-5 overflow-y-visible" id="CarruselInferior1"><!-- no mover el width del inner -->
-                    <!-- Aqui van los elementos generados -->
-                </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-    <!-- carruseles inferiores -->
-    <h1 class="text-white mt-5 text-center">Recomenaciones</h1>
-    <!-- carruseles inferiores 2 -->
-        <div id="carouselExample3" class="carousel slide mx-auto" >
-                <div class="carousel-inner mt-2 overflow-y-visible" id="CarruselInferior2"><!-- no mover el width del inner -->
-                <!-- adentro -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>  
-    <!-- carruseles inferiores 2 -->
+    </section>
+    
+    <!-- Peliculas -->
+   
     <!-- footer -->
-    <div class="container mt-5">
-      <div class="row border-top">
-        <div class="col mb-5 text-bg-white">hola</div>
-        <div class="col mb-5">hola</div>
-        <div class="col mb-5">hola</div>
+    <div class="container mt-5 text-bg-dark">
+      <div class="row border-top ">
+        <div class="col mb-5 ">FicPlus™</div>
+        <div class="col mb-5">Acerda de.</div>
+        <div class="col mb-5">Propiedad de "Los Aldapas"</div>
       </div>
     </div>
     <!-- footer -->

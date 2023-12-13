@@ -6,7 +6,7 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return view('welcome_message');
+        return view('inicio.php');
     }
 
     public function inicio(){
@@ -26,5 +26,12 @@ class Home extends BaseController
     public function busqueda($Suchen = null){
         $data['Suchen'] = $Suchen;
         return view("Menu_Busqueda.php", $data);
+    }
+    public function busquedaCat($Suchen = null){
+        $data['Suchen'] = $Suchen;
+        return view("Menu_BusquedaCat.php", $data);
+    }
+    public function Menu_Categorias(){
+        return view("Menu_Categorias.php");
     }
 }

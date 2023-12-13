@@ -36,8 +36,21 @@ class UsuariosController extends ResourceController
                 ];
                 return $this->respond($resultado);
             }
+            else{
+                $resultado = [
+                    'estatus' => 201,
+                    'error' => null,
+                    'mensaje' => ['error' => 'La contraseña es incorrecta']
+                ];
+                return $this->respond($resultado);
+            }
         }else{
-            return $this->respond("Error, valide los datos");
+            $resultado = [
+                'estatus' => 201,
+                'error' => null,
+                'mensaje' => ['error' => 'El correo es incorrecto']
+            ];
+            return $this->respond($resultado);
         }
 
     }

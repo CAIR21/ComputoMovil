@@ -21,6 +21,23 @@
   }
     </style>
     <script>
+       $.ajax({
+            type: 'GET',
+            url: '<?= base_url('usuarios') ?>/' + 1, // Ruta al controlador y método
+            dataType: 'json',
+              success: function(response) {
+                // Maneja la respuesta del servidor
+              var h = document.getElementById('usuario');
+              h.textContent =  response.Nombre_Usuario;
+              console.log(response);
+              procesarDatos(response);
+              },
+              error: function(error) {
+                // Maneja errores de la solicitud
+              console.log(error);
+              alert('Error al procesar el formulario');
+              }
+         });
 
       function redirigir() {
             var valorCajaTexto = document.getElementById('Busqueda').value;
@@ -85,7 +102,7 @@
             if (i%4 == 0){
               var nuevoDiv = document.createElement('div');
               if(i == 0){
-              nuevoDiv.className = 'carousel-item active text-center m-0 p-0';
+              nuevoDiv.className = 'carousel-item active text-center';
             }
             else{
               nuevoDiv.className = 'carousel-item text-center';
@@ -127,7 +144,7 @@
             if (i%4 == 0){
               var nuevoDiv = document.createElement('div');
               if(i == 0){
-              nuevoDiv.className = 'carousel-item active text-center m-0 p-0';
+              nuevoDiv.className = 'carousel-item active text-center';
             }
             else{
               nuevoDiv.className = 'carousel-item text-center';
@@ -160,15 +177,11 @@
             <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
                 <li class="dropdown">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle mb-2 px-3" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="IMG/batman.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                        <span class="d-none d-sm-inline mx-1">Batman</span>
+                        <img src='<?= base_url('IMG') ?>/batman.png' alt="hugenerd" width="30" height="30" class="rounded-circle">
+                        <span class="d-none d-sm-inline mx-1" id="usuario">Batman</span>
                     </a>
-                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle mb-2 px-3" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="IMG/espiterman.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                      <span class="d-none d-sm-inline mx-1">Spiderman</span>
-                  </a>
                   <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle mb-2 px-3" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="IMG/Plus.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                    <img src='<?= base_url('IMG') ?>/Plus.png' alt="hugenerd" width="30" height="30" class="rounded-circle">
                     <span class="d-none d-sm-inline mx-1">Añadir perfil</span>
                 </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
@@ -178,11 +191,11 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="../cerrar_sesion.php" href="#">Cerrar sesión</a></li>
+                        <li><a class="dropdown-item" href="../cerrar_sesion.php">Cerrar sesión</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a style ="Color: White;" href="..." class="nav-link text-truncate">
+                    <a style ="Color: White;" href='<?= base_url('Principal') ?>' class="nav-link text-truncate">
                         <i class="material-icons d-none d-sm-inline" style="font-size:36px">home</i><span class="ms-1 d-none d-sm-inline">Menu principal</span>
                     </a>
                     
@@ -192,14 +205,15 @@
                         <i class="fs-4 bi-bootstrap"></i><span class="ms-1 d-none d-sm-inline" style="color: White">Categorias</span></a>
                     <ul class="collapse nav flex-column" id="submenu2" data-bs-parent="#menu">
                         <li class="w-100">
-                            <a href="../Paginas/Categorias.php?Suchen=Accion" class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Acción</span></a>
-                            <a href="../Paginas/Categorias.php?Suchen=Ciencia Ficcion" class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Ciencia Ficcion</span></a>
-                            <a href="../Paginas/Categorias.php?Suchen=Animada" class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Animadas</span></a>
-                            <a href="../Paginas/Categorias.php?Suchen=Suspenso" class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Suspenso</span></a>
-                            <a href="../Paginas/Categorias.php?Suchen=Terror" class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Terror</span></a>
-                            <a href="../Paginas/Categorias.php?Suchen=Adultos" class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Adultos</span></a>
-                            <a href="../Paginas/Categorias.php?Suchen=Jovenes" class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Jovenes</span></a>
-                            <a href="../Paginas/Categorias.php?Suchen=Infantil" class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Infantiles</span></a>
+                            <a href='<?= base_url('BusquedaCat') ?>/Accion' class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Acción</span></a>
+                            <a href='<?= base_url('BusquedaCat') ?>/Terror' class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Terror</span></a>
+                            <a href='<?= base_url('BusquedaCat') ?>/Animacion' class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Animacion</span></a>
+                            <a href='<?= base_url('BusquedaCat') ?>/Suspenso' class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Suspenso</span></a>
+                            <a href='<?= base_url('BusquedaCat') ?>/Drama' class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Drama</span></a>
+                            <a href='<?= base_url('BusquedaCat') ?>/Comedia' class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Comedia</span></a>
+                            <a href='<?= base_url('BusquedaCat') ?>/Misterio' class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Misterio</span></a>
+                            <a href='<?= base_url('BusquedaCat') ?>/Infantiles' class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Infantiles</span></a>
+                            <a href='<?= base_url('BusquedaCat') ?>/Anime' class="nav-link px-5" style="color: White"> <span class="d-none d-sm-inline">Anime</span></a>
                         </li>
                     </ul>
                 </li>
@@ -220,20 +234,17 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-dark bg-gradient w-100 sticky-top" >
         <div class="container-fluid">
-          <a class="navbar-brand text-white" href="#">FIC+</a>
+          <a class="navbar-brand text-white" href='<?= base_url('Principal') ?>'>FIC+</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active text-white px-4" aria-current="page" href="#"><strong>Inicio</strong></a>
+                <a class="nav-link active text-white px-4" aria-current="page"href='<?= base_url('Principal') ?>'><strong>Inicio</strong></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white px-4" href="#"><strong>Buscar</strong></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white px-4" href="#"><strong>Categorias</strong></a>
+                <a class="nav-link text-white px-4" href='<?= base_url('Categorias') ?>'><strong>Categorias</strong></a>
               </li>
             </ul>
             <div class="d-flex align-items-center " style="Color: White">
