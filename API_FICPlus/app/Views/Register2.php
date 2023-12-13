@@ -34,7 +34,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title text-center">Registro</h5>
-          <form id="FormularioR" class="text-center" >
+          <form id="FormularioR" class="text-center" method="post">
 
             <!--Nombres Usuario-->
             <div class="form-group">
@@ -89,7 +89,7 @@
 
             <button type="submit" onclick="enviarFormulario()" class="btn btn-warning btn-block">Registrarse</button>
             </form>
-            <button type="button" onclick="sesion()" class="btn btn-primary btn-block">Ya tengo cuenta</button>
+            <button  onclick="sesion()" class="btn btn-primary btn-block">Ya tengo cuenta</button>
           
         </div>
       </div>
@@ -117,10 +117,9 @@ function sesion(){
   function enviarFormulario() {
         var contrasena1 = $('#Contrasenia').val();
         var contrasena2 = $('#Contrasenia2').val();
-        var formData = new FormData($('#FormularioR')[0]);
+        var formData = $('#FormularioR').serialize();
         
 
-// Verificar si hay algún valor nulo
       
   if(contrasena1 == contrasena2){
     $.ajax({
@@ -135,12 +134,16 @@ function sesion(){
         // Recupera el estatus y muestra un alert en función de ese estatus
         if (response.estatus === 201) {
             alert("¡Te haz Registrado Correctamente!");
+            window.location.href ='<?= base_url('inicio') ?>';
         } else {
             alert('Error al procesar el formulario');
+            window.location.href ='<?= base_url('Registro') ?>';
         }
     },
     error: function(error) {
         // Maneja errores de la solicitud
+        alert('Error en la solicitud');
+        window.location.href ='<?= base_url('Registro') ?>';
         console.error(error);
     }
 });
