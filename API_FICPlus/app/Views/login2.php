@@ -60,7 +60,7 @@
                 </div>
               </div>
             </div>
-            <button type="submit" onclick="Iniciar()" class="btn btn-primary btn-block">Iniciar Sesión</button>
+            <button type="submit" onclick="Iniciar(event)" class="btn btn-primary btn-block">Iniciar Sesión</button>
           </form>
           <button onclick="registro()" class="btn btn-warning btn-block">Registrarme</button>
         </div>
@@ -84,33 +84,36 @@
     window.location.href='<?= base_url('Registro')?>';
 
   }
-  function Iniciar(){
+  function Iniciar(event) {
+    event.preventDefault(); // Evita el envío automático del formulario
+
     console.log("Entró");
     var correo = $('#email').val();
     var password = $('#password').val();
+    
     $.ajax({
-            type: 'POST',
-            url: '<?= base_url("login") ?>',
-            data: { email: correo, password: password },
-            dataType: 'json',
-            success: function(response) {
-                if (response.estatus === 200) {
-                    console.log(response.estatus);
-                    alert("Sesion iniciada correctamente");
-                    window.location.href = '<?= base_url('Principal') ?>';
-                    // Redirigir o realizar acciones después del inicio de sesión exitoso
-                } else {
-                    console.log(response.estatus);
-                    alert(JSON.stringify(response.mensaje.error));
-                    window.location.href = '<?= base_url('inicio') ?>';
-                    // Manejar el caso de credenciales inválidas
-                }
-            },
-            error: function() {
-                alert('Error al procesar la solicitud.');
-                window.location.href = '<?= base_url('inicio') ?>';
-            }
-        });
+      type: 'POST',
+      url: '<?= base_url("login") ?>',
+      data: { email: correo, password: password },
+      dataType: 'json',
+      success: function(response) {
+        if (response.estatus === 200) {
+          console.log(response.estatus);
+          alert("Sesión iniciada correctamente");
+          window.location.href = '<?= base_url('Principal') ?>';
+          // Redirigir o realizar acciones después del inicio de sesión exitoso
+        } else {
+          console.log(response.estatus);
+          alert(JSON.stringify(response.mensaje.error));
+          window.location.href = '<?= base_url('inicio') ?>';
+          // Manejar el caso de credenciales inválidas
+        }
+      },
+      error: function() {
+        alert('Error al procesar la solicitud.');
+        window.location.href = '<?= base_url('inicio') ?>';
+      }
+    });
   }
 </script>
 </body>

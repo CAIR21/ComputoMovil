@@ -87,7 +87,7 @@
             </div>
             <!--Aceptar Terminos y Condiciones-->
 
-            <button type="submit" onclick="enviarFormulario()" class="btn btn-warning btn-block">Registrarse</button>
+            <button type="submit" onclick="enviarFormulario(event)" class="btn btn-warning btn-block">Registrarse</button>
             </form>
             <button  onclick="sesion()" class="btn btn-primary btn-block">Ya tengo cuenta</button>
           
@@ -114,14 +114,31 @@ function sesion(){
 
 
 
-  function enviarFormulario() {
-        var contrasena1 = $('#Contrasenia').val();
-        var contrasena2 = $('#Contrasenia2').val();
-        var formData = $('#FormularioR').serialize();
-        
+function enviarFormulario(event) {
+  event.preventDefault();
+  // Obtén los valores de los campos
+  var nombreUsuario = $.trim($('#Nombre_Usuario').val());
+  var apellidoUsuario = $.trim($('#Apellido_Usuario').val());
+  var correo = $.trim($('#Correo').val());
+  var contrasenia1 = $.trim($('#Contrasenia').val());
+  var contrasenia2 = $.trim($('#Contrasenia2').val());
 
+  // Verifica que ninguno de los campos esté vacío
+  if (nombreUsuario === '' || apellidoUsuario === '' || correo === '' || contrasenia1 === '' || contrasenia2 === '') {
+    alert('Todos los campos son obligatorios. Por favor, completa todos los campos.');
+    return;
+  }
+
+  // Verifica que las contraseñas coincidan
+  if (contrasenia1 !== contrasenia2) {
+    alert('Las contraseñas no coinciden. Verifica las contraseñas.');
+    return;
+  }
+
+  // Si llegamos aquí, todos los campos están completos y las contraseñas coinciden
+  var formData = $('#FormularioR').serialize();
       
-  if(contrasena1 == contrasena2){
+  if(contrasenia1 == contrasenia2){
     $.ajax({
     type: 'POST',
     url: '<?= base_url('usuarios') ?>', // Ruta al controlador y método

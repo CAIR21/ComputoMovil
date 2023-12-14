@@ -73,15 +73,17 @@
 
           for(var i = 0;i < Datos.length; i++){
             var nuevoImg = document.createElement('img');
+            var nuevoA = document.createElement('a');
             nuevoImg.className = "resultado p-1 rounded-4";
             nuevoImg.src = Datos[i].Poster_Pelicula;
             nuevoImg.alt = Datos[i].Titulo;
             nuevoImg.style = "height: 250px; width: auto; cursor:pointer;";
-            miDiv.appendChild(nuevoImg);
+            nuevoA.href = '<?= base_url('peliculas') ?>/' + Datos[i].ID_Peliculas;
+            nuevoA.appendChild(nuevoImg);
+            miDiv.appendChild(nuevoA);
           }
           
          }
-      
     </script>
 </head>
 <body class="bg-dark m-0 p-0">
