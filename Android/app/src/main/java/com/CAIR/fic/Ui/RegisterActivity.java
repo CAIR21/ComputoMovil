@@ -46,9 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
         Button BtnLogin = findViewById(R.id.btnIniciarSesionReg);
         BtnLogin.setOnClickListener(view -> irAlLogin());
 
-        SwitchMostrarContrasenia.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            mostarOcultarContra(isChecked);
-        });
+        SwitchMostrarContrasenia.setOnCheckedChangeListener((buttonView, isChecked) -> mostarOcultarContra(isChecked));
     }
 
     private void registroUsuario() {
@@ -73,27 +71,10 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-
-
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(correo).matches() || !correo.matches(".*@.*") || !correo.substring(correo.indexOf("@")).contains(".com")) {
             Toast.makeText(this, "Ingrese una dirección de correo electrónico válida.", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        /*if (!android.util.Patterns.EMAIL_ADDRESS.matcher(correo).matches()||!correo.contains(".com")) {
-            Toast.makeText(this, "Ingrese un correo electrónico válido.", Toast.LENGTH_SHORT).show();
-            return;
-        }*/
-
-        /*if (correo.length() < 15) {
-            Toast.makeText(this, "El correo debe tener al menos 13 caracteres.", Toast.LENGTH_SHORT).show();
-            return;
-        }*/
-
-       /* if (!correo.contains("@")) {
-            Toast.makeText(this, "El correo debe contener el carácter '@'.", Toast.LENGTH_SHORT).show();
-            return;
-        }*/
 
         if (contra.length() < 8) {
             Toast.makeText(this, "La contraseña debe tener al menos 8 caracteres.", Toast.LENGTH_SHORT).show();
@@ -139,7 +120,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Respuesta> call, Throwable t) {
-                Toast.makeText(RegisterActivity.this, "Error en la conexión", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Sin conexion a internet.", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Respuesta> call, Throwable t) {
-                showToast("Correo o contraseña incorrectos.");
+                showToast("Sin conexion a internet.");
             }
         });
     }

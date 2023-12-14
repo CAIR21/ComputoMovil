@@ -18,7 +18,6 @@ import java.util.List;
 public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.PeliculaViewHolder> {
 
     private List<Pelicula> ListaPeliculas;
-    private Context context;
     private OnItemClickListener Listener;
 
     public interface OnItemClickListener {

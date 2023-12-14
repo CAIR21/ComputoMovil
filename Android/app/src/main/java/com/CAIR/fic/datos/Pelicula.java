@@ -40,17 +40,11 @@ public class Pelicula implements Serializable {
         return ID_Categoria;
     }
 
-    public String getEtiquetas() {
-        return Etiquetas;
-    }
+    public String getEtiquetas() {return Etiquetas;}
 
-    public String getID_Clasificacion() {
-        return ID_Clasificacion;
-    }
+    public String getID_Clasificacion() {return ID_Clasificacion;}
 
-    public String getAnio() {
-        return Anio;
-    }
+    public String getAnio() {return Anio;}
 
     public String getPoster_Pelicula() {
         return Poster_Pelicula;

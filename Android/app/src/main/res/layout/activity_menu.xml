@@ -15,7 +15,7 @@
             android:id="@+id/ClNavbar"
             android:layout_width="match_parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_height="400dp">
+            android:layout_height="345dp">
             <ImageView
                 android:id="@+id/portada"
                 android:layout_width="match_parent"
@@ -31,83 +31,39 @@
                 android:id="@+id/clHeader"
                 android:layout_width="match_parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="30dp"
                 android:padding="15dp"
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/logo"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:contentDescription="@string/app_name" />
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_search"
-                    android:layout_marginEnd="@dimen/margin_right_search"
-                    app:layout_constraintEnd_toStartOf="@+id/ivUsuario"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/imageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:contentDescription="@string/app_name"
-                    />
+                    android:src="@drawable/logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <ImageView
                     android:id="@+id/ivUsuario"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_profile"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:contentDescription="@string/app_name"
-                    />
+                    android:src="@drawable/ic_profile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/clHeader"
                 android:layout_marginHorizontal="60dp"
-                >
-                <TextView
-                    android:id="@+id/tvSerie"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title1"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/size_title"
-                    tools:ignore="SpUsage" />
-                <TextView
-                    android:id="@+id/peliculas"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title4"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/size_title"
-                    tools:ignore="SpUsage" />
-                <TextView
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title3"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/size_title"
-                    tools:ignore="SpUsage"
-                    />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clHeader">
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -117,28 +73,16 @@
                 >
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:layout_editor_absoluteX="15dp">
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLista"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/button_list"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/button_text"
-                    app:icon="@drawable/ic_plus"
-                    app:iconGravity="top"
-                    app:iconTint="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="SpUsage" />
+
+
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnPlayMovie"
@@ -146,31 +90,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
-                    android:text="@string/button_play"
+                    android:text="@string/Web"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
-                    app:icon="@drawable/ic_play"
+                    app:icon="@drawable/web"
                     app:iconTint="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnInfo"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/button_info"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/button_text"
-                    app:icon="@drawable/ic_info"
-                    app:iconGravity="top"
-                    app:iconTint="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    tools:ignore="SpUsage" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
         <TextView
