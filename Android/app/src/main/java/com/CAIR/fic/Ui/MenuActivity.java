@@ -1,7 +1,10 @@
 package com.CAIR.fic.Ui;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,6 +15,7 @@ import com.CAIR.fic.datos.Pelicula;
 import com.CAIR.fic.datos.PeliculaAdapter;
 import com.CAIR.fic.api.Conexion;
 import com.CAIR.fic.servicio.IPeliculas;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +54,8 @@ public class MenuActivity extends AppCompatActivity implements PeliculaAdapter.O
     private List<Pelicula> ListaMisterio = new ArrayList<>();
     private List<Pelicula> ListaInfantiles = new ArrayList<>();
     private List<Pelicula> ListaAnime = new ArrayList<>();
+
+    private MaterialButton btnPlayMovie;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +125,14 @@ public class MenuActivity extends AppCompatActivity implements PeliculaAdapter.O
 
         AnimeAdapter = new PeliculaAdapter(ListaAnime, this);
         RvAnime.setAdapter(AnimeAdapter);
+
+        btnPlayMovie = findViewById(R.id.btnPlayMovie);
+
+        btnPlayMovie.setOnClickListener(v -> {
+            String url = "https://ficplus2.000webhostapp.com";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
 
         getPosts();
     }

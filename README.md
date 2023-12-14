@@ -13,3 +13,5 @@ Se modificaron visualmente los formularios, se necesita arreglar el login ya que
 
 2/12/2023
 Validacioness de login y registro realizadas tanto para web como android
+
+Proyecto terminado 13/12/2023 ATT:Don CAIR
